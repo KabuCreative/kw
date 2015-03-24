@@ -1,27 +1,66 @@
 <header class="site-header">
 
-  <div class="wrapper">
+    <div class="site-links">
+        <div class="wrapper">
+            <a href="">International &amp; Interstate Moves</a>
+            <a href="">Excess Baggage</a>
+            <a href="">Art Transport &amp; Storage</a>
+        </div>
+    </div>
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <div class="wrapper">
+        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        <div class="top-menu">
+            <a href="#">Corporate Relocation</a>
+            <a href="#">About Us</a>
+            <a href="#">Trade Login</a>
+            <a href="#">Client Login</a>
+        </div>
+    </div>
 
     <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-
-      <div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
+      <div class="wrapper">
+        <ul>
+          <li><a href="/">Home</a>
+          <li><a href="/international-removals">International Removals</a>
+            <ul>
+                <li><a href="/international-sea-freight">Sea Freight</a>
+                    <ul>
+                        <li><a href="/shipping-to-new-zealand">New Zealand</a></li>
+                        <li><a href="/shipping-to-uk">UK</a></li>
+                        <li><a href="/shipping-to-usa">USA</a></li>
+                        <li><a href="#">Singapore</a></li>
+                        <li><a href="#">Hong Kong</a></li>
+                        <li><a href="#">Canada</a></li>
+                        <li><a href="#">South Africa</a></li>
+                        <li><a href="#">Middle East / Dubai</a></li>
+                    </ul>
+                </li>
+                <li><a href="/international-air-freight">Air Freight</a></li>
+            </ul>
+          </li>
+          <li><a href="/interstate-removals">Interstate Removals</a>
+            <ul>
+                <li><a href="#">Moving to Melbourne or Regional Victoria</a></li>
+                <li><a href="#">Moving to Sydney or regional NSW</a></li>
+                <li><a href="#">Moving to Canberra/ACT</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Storage</a>
+            <ul>
+                <li><a href="#">International Storage</a></li>
+                <li><a href="#">Melbourne Storage</a></li>
+                <li><a href="#">Sydney Storage</a></li>
+                <li><a href="#">Canberra/ACT Storage</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Moving Vehicles</a></li>
+          <li><a href="#">Moving Pets</a></li>
+          <li><a href="#">Insurance</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
       </div>
     </nav>
-
   </div>
-
 </header>
