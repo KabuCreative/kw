@@ -4,10 +4,28 @@ layout: default
 <div class="post">
 
   <article class="post-content">
-      <div class="wrapper">
-        <h1 class="post-title">{{ page.title }}</h1>
-        {{ content }}
-      </div>
+        <div class="wrapper">
+            <div class="banner">
+                {{ page.banner }}
+            </div>
+            <div class="container">
+                <div class="section desktop tablet">
+                    <p>Accreditation logos here</p>
+                </div>
+            </div>
+            <div class="main-content">
+                {{ content }}
+
+                <div class="container">
+                    <div class="section desktop tablet">
+                        <p>Testimonials</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                {{ page.sidebar }}
+            </div>
+        </div>
   </article>
 
 </div>

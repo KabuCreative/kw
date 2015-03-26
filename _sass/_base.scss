@@ -9,7 +9,6 @@ dl, dd, ol, ul, figure {
 }
 
 
-
 /**
  * Basic styling
  */
@@ -23,6 +22,9 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+strong {
+    font-weight: 600;
+}
 
 
 /**
