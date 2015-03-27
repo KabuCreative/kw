@@ -93,7 +93,6 @@ nav ul li {
 nav a {
     display:block;
     padding:0 10px;
-    color:#FFF;
     font-size:16px;
     line-height: 60px;
     text-decoration:none;
@@ -101,6 +100,10 @@ nav a {
 
 nav a:hover {
     background-color: #ccc;
+}
+
+a.todo {
+    color: #777;
 }
 
 /* Hide Dropdowns by Default */
