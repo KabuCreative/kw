@@ -1,33 +1,19 @@
 ---
 layout: main
 ---
-<div class="post">
 
-  <article class="post-content">
-        <div class="banner">
-            <div class="wrapper">
-            {{ page.banner }}
-            </div>
+<article>
+    <aside class="sidebar">
+        {{ page.sidebar }}
+    </aside>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <div class="section desktop tablet">
+        <div class="container">
+            <p>Testimonials</p>
         </div>
-        <div class="wrapper">
-            <div class="container">
-                <div class="section desktop tablet">
-                    <p>Accreditation logos here</p>
-                </div>
-            </div>
-            <div class="main-content">
-                {{ content }}
-
-                <div class="container">
-                    <div class="section desktop tablet">
-                        <p>Testimonials</p>
-                    </div>
-                </div>
-            </div>
-            <div class="sidebar">
-                {{ page.sidebar }}
-            </div>
-        </div>
-  </article>
-
-</div>
+    </div>
+</article>

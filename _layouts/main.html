@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
-
   <body>
-
     {% include header.html %}
-
-    <div class="page-content">
-        {{ content }}
+    <div class="banner">
+        {% include top-nav.html %}
+        <div class="banner-content">
+            {{ page.banner }}
+        </div>
     </div>
-
+    {% include logos.html %}
+    {{ content }}
     {% include footer.html %}
-
   </body>
-
 </html>

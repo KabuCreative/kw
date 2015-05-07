@@ -1,50 +1,299 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset "utf-8";
 
 
-
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   17px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-$on-mobile:        400px;
-$on-palm:          600px;
-$on-laptop:        800px;
+$kw-green: #00562d;
+$kw-cream: #fff3af;
+$white: #fff;
+$bg-grey: #e0e0e0;
 
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
 
-// Using media queries with like this:
-// @include media-query($palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
+a {
+    color: $kw-green;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2.center {
+    margin-bottom: 60px;
+    font-size: 25px;
+}
+
+p.cta {
+    margin-top: 60px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+}
+
+.clearfix {
+    clear: both;
+}
+
+
+.center {
+    text-align: center;
+}
+
+
+.button {
+    background-color: $white;
+    color: $kw-green;
+    padding: 7px 20px;
+    text-decoration: none;
+    line-height: 1.2;
+    display: inline-block;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.button.primary {
+    background-color: $kw-green;
+    color: $white;
+}
+
+.grey-bg {
+    background-color: $bg-grey;
+}
+
+.light-grey-bg {
+    background-color: lighten($bg-grey, 5%);
+    border-top: 1px solid $bg-grey;
+    border-bottom: 1px solid $bg-grey;
+}
+
+.section {
+    margin: 0 0 20px 0;
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.third {
+    width: 31%;
+    padding: 0 1%;
+    float: left;
+}
+
+.half {
+    width: 48%;
+    padding: 1%;
+    float: left;
+}
+
+header {
+    background-color: $kw-green;
+}
+
+.site-header {
+    color: $white;
+    padding: 25px 0;
+
+    a {
+        color: $white;
+    }
+
+    .site-title {
+        float: left;
+    }
+
+    .right {
+        float: right;
+
+        .top-menu {
+            float: right;
+            font-family: 'Noto Serif', serif;
+            margin: 0 0 5px 0;
+            font-size: 15px;
+
+
+            a {
+                text-decoration: none;
+                margin-left: 10px;
+            }
+        }
+
+        #phone {
+            color: $kw-cream;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            clear: both;
+            display: block;
+            text-align: right;
+            font-size: 28px;
+        }
     }
 }
 
 
+.banner {
+    margin: 0;
+    padding: 0;
+    background: #1e5232 url('../img/banner-bg.png') no-repeat top center fixed;
+    color: $white;
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+    .site-nav {
+        background-color: rgba(23, 49, 22, .6);
+
+        ul, li {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline;
+        }
+
+        a {
+            color: $white;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+        }
+    }
+
+    .banner-content {
+        padding: 30px 0;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+
+        h1 {
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            font-weight: normal;
+            font-size: 51px;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        p.subtitle {
+            font-family: 'Noto Serif', serif;
+            font-size: 27px;
+            font-style: italic;
+            margin-top: 0;
+        }
+    }
+}
+
+.logos {
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid darken($bg-grey, 5%);
+
+    img {
+        padding: 0 20px;
+        border-right: 1px dotted darken($bg-grey, 10%);
+    }
+
+    .last {
+        border: 0;
+    }
+}
+
+
+.homepage-logos {
+    margin-top: 30px;
+
+    img {
+        margin-right: 20px;
+        max-width: 100px;
+        max-height: 70px;
+    }
+}
+
+
+article {
+    position: relative;
+}
+
+aside.sidebar {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding: 1%;
+    width: 20%;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        a {
+            line-height: 45px;
+            color: #1a1a1a;
+            display: block;
+            border-top: 1px solid $bg-grey;
+        }
+    }
+}
+
+.site-footer {
+    background-color: $kw-green;
+    border-top: 5px solid darken($kw-green, 5%);
+    color: $white;
+    margin: 40px 0 0 0;
+    padding: 20px 0;
+    font-size: 14px;
+
+    h3 {
+        color: $kw-cream;
+    }
+
+    a {
+        color: $white;
+        text-decoration: underline;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            margin: 0;
+
+            a {
+                font-size: 12px;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.sub-footer {
+    background-color: darken($kw-green, 5%);
+    color: $white;
+    padding: 10px;
+    font-size: 12px;
+
+    a {
+        color: $white;
+        display: inline-block;
+        margin-right: 15px;
+    }
+}
