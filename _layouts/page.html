@@ -3,17 +3,33 @@ layout: main
 ---
 
 <article>
+<!--
     <aside class="sidebar">
         {{ page.sidebar }}
     </aside>
+-->
 
     <main>
         {{ content }}
     </main>
+    <div class="clearfix"></div>
 
-    <div class="section desktop tablet">
+</article>
+
+{% if page.faq %}
+    <div class="section light-grey-bg">
         <div class="container">
-            <p>Testimonials</p>
+            <h2>Frequently asked questions</h2>
+            <div class="faqs">
+                {{ page.faq }}
+            </div>
+            <p>Have another question?  Call us on 1300 368 893 or visit our <a href="/faq/">FAQ page</a>.</p>
         </div>
     </div>
-</article>
+{% endif %}
+
+<div class="section desktop tablet">
+    <div class="container">
+        <p>Testimonials</p>
+    </div>
+</div>

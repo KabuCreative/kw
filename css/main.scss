@@ -19,6 +19,10 @@ h6 {
     text-transform: uppercase;
 }
 
+p {
+    margin: 16px 0 0 0;
+}
+
 a {
     color: $kw-green;
     text-decoration: none;
@@ -42,6 +46,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     line-height: 1.4;
+    position: relative;
 }
 
 .clearfix {
@@ -61,7 +66,6 @@ body {
     text-decoration: none;
     line-height: 1.2;
     display: inline-block;
-    margin-bottom: 15px;
     border-radius: 3px;
     font-family: 'Noto Serif', serif;
     font-style: italic;
@@ -73,36 +77,56 @@ body {
     color: $white;
 }
 
+.sub-button {
+    display: block;
+    margin-top: 15px;
+}
+
 .grey-bg {
     background-color: $bg-grey;
 }
 
 .light-grey-bg {
-    background-color: lighten($bg-grey, 5%);
-    border-top: 1px solid $bg-grey;
-    border-bottom: 1px solid $bg-grey;
+    background-color: lighten($bg-grey, 10%);
+    border-top: 1px solid lighten($bg-grey, 5%);
+    border-bottom: 1px solid lighten($bg-grey, 5%);
+}
+
+.green-bg {
+    background-color: $kw-green;
+    color: $white;
+
+    a {
+        color: $white;
+        text-decoration: underline;
+    }
 }
 
 .section {
-    margin: 0 0 20px 0;
-    padding: 40px 0;
+    margin: 0;
+    padding: 50px 0 70px 0;
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1290px;
     margin: 0 auto;
 }
 
+.two-thirds {
+    width: 60%;
+    padding: 1.5%;
+    float: left;
+}
 
 .third {
-    width: 31%;
-    padding: 0 1%;
+    width: 30%;
+    padding: 1.5%;
     float: left;
 }
 
 .half {
-    width: 48%;
-    padding: 1%;
+    width: 47%;
+    padding: 0 1.5%;
     float: left;
 }
 
@@ -112,7 +136,7 @@ header {
 
 .site-header {
     color: $white;
-    padding: 25px 0;
+    padding: 15px 0;
 
     a {
         color: $white;
@@ -128,7 +152,7 @@ header {
         .top-menu {
             float: right;
             font-family: 'Noto Serif', serif;
-            margin: 0 0 5px 0;
+            margin: 5px 0;
             font-size: 15px;
 
 
@@ -176,7 +200,7 @@ header {
     }
 
     .banner-content {
-        padding: 30px 0;
+        padding: 50px 0 30px 0;
         text-align: center;
         max-width: 800px;
         margin: 0 auto;
@@ -186,15 +210,19 @@ header {
             font-family: 'Oswald', sans-serif;
             font-weight: normal;
             font-size: 51px;
-            margin-bottom: 0;
             line-height: 1.2;
+            margin: 0 0 10px 0;
         }
 
         p.subtitle {
             font-family: 'Noto Serif', serif;
             font-size: 27px;
             font-style: italic;
-            margin-top: 0;
+            margin: 10px 0 20px 0;
+        }
+
+        p a.button {
+            margin-bottom: 20px;
         }
     }
 }
@@ -221,42 +249,48 @@ header {
 
     img {
         margin-right: 20px;
-        max-width: 100px;
-        max-height: 70px;
+        max-width: 80px;
+        max-height: 40px;
     }
 }
 
-
+/*
 article {
-    position: relative;
-}
 
-aside.sidebar {
-    position: absolute;
-    top: 20px;
-    right: 0;
-    padding: 1%;
-    width: 20%;
+    .sidebar {
+        width: 20%;
+        float: right;
 
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
 
-        a {
-            line-height: 45px;
-            color: #1a1a1a;
-            display: block;
-            border-top: 1px solid $bg-grey;
+            a {
+                line-height: 45px;
+                padding: 0 15px;
+                color: #1a1a1a;
+                display: block;
+                border-top: 1px solid $bg-grey;
+            }
+
+            a:hover {
+                background-color: lighten($bg-grey, 7%);
+            }
         }
     }
+
+    main {
+
+    }
 }
+*/
 
 .site-footer {
     background-color: $kw-green;
     border-top: 5px solid darken($kw-green, 5%);
     color: $white;
-    margin: 40px 0 0 0;
+    margin: 0;
     padding: 20px 0;
     font-size: 14px;
 
@@ -295,5 +329,136 @@ aside.sidebar {
         color: $white;
         display: inline-block;
         margin-right: 15px;
+    }
+}
+
+
+.quote-panel {
+    display: none;
+    position: absolute;
+    top: -300px;
+    left: 0;
+    height: 300px;
+    width: 100%;
+
+    .quote-tab {
+        font-family: 'Noto Serif', serif;
+        font-style: italic;
+        background-color: #333;
+        color: #fff;
+        padding: 7px 15px;
+        position: absolute;
+        bottom: -50px;
+        right: 10%;
+    }
+
+    .quote-form {
+        background-color: #333;
+        width: 100%;
+        color: $white;
+        height: 300px;
+    }
+}
+
+.faqs{
+    .ui-icon-down:before,
+    .ui-icon-up:before {
+        font-family: 'FontAwesome';
+        margin-right: 10px;
+    }
+
+    .ui-icon-down:before {
+        content: '\f107';
+    }
+
+    .ui-icon-up:before {
+        content: '\f106';
+    }
+
+    strong.q {
+        display: block;
+        padding: 10px 0;
+        cursor: pointer;
+        border-bottom: 1px solid $bg-grey;
+        outline: 0;
+
+        &:hover {
+            background-color: lighten($bg-grey, 7%);
+        }
+    }
+
+    div {
+        padding-bottom: 20px;
+    }
+}
+
+
+.tabs {
+    zoom: 1;
+    margin-top: 30px;
+
+    .ui-tabs-nav {
+        list-style: none;
+        position: relative;
+        padding: 0;
+        margin: 0;
+
+        li {
+            position: relative;
+            float: left;
+            margin: 0 3px -2px 0;
+            padding: 0;
+
+            a {
+                display: block;
+                padding: 10px 20px;
+                background: #f0f0f0;
+                border: 1px #ccc solid;
+                border-bottom: none;
+                color: #333;
+                outline: none;
+            }
+        }
+
+        li.ui-state-active a {
+            padding: 10px 20px 12px 20px;
+            background: #fff;
+            position: relative;
+            top: -1px;
+        }
+
+        li.ui-state-active a,
+        li.ui-state-disabled a,
+        li.ui-state-processing a {
+            cursor: default;
+        }
+    }
+
+    .ui-tabs-panel {
+        display: block;
+        clear: both;
+        border: 1px solid $bg-grey;
+        padding: 10px 20px;
+    }
+
+    .ui-tabs-hide {
+        display: none;
+    }
+}
+
+.green-bg .tabs {
+    ul li a {
+        background-color: darken($kw-green, 2%);
+        border-color: rgba(255, 255, 255, .1);
+        color: #fff;
+        text-decoration: none;
+    }
+
+    ul li.ui-state-active a {
+        background-color: $kw-green;
+    }
+
+    .ui-tabs-panel {
+        border-color: rgba(255, 255, 255, .1);
     }
 }
