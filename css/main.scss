@@ -50,6 +50,7 @@ body {
 }
 
 .clearfix {
+    display: block;
     clear: both;
 }
 
@@ -109,11 +110,11 @@ body {
 
 .section {
     margin: 0;
-    padding: 50px 0 70px 0;
+    padding: 50px 0;
 }
 
 .container {
-    max-width: 1290px;
+    max-width: 1190px;
     margin: 0 auto;
 }
 
@@ -121,7 +122,7 @@ body {
     margin-left: -1.5%;
 }
 
-.row.margin-top {
+.margin-top {
     margin-top: 40px;
 }
 
@@ -216,7 +217,7 @@ header {
             text-decoration: none;
             font-family: 'Oswald', sans-serif;
             display: inline-block;
-            padding: 15px;
+            padding: 15px 10px;
 
             &:hover {
                 background-color: darken($kw-green, 5%);
@@ -316,7 +317,7 @@ article {
     border-top: 5px solid darken($kw-green, 5%);
     color: $white;
     margin: 0;
-    padding: 20px 0;
+    padding: 30px 0;
     font-size: 14px;
 
     h3 {
@@ -344,7 +345,8 @@ article {
     }
 }
 
-.sub-footer {
+.sub-footer,
+.art-footer {
     background-color: darken($kw-green, 5%);
     color: $white;
     padding: 10px;
@@ -355,6 +357,11 @@ article {
         display: inline-block;
         margin-right: 15px;
     }
+}
+
+.art-footer {
+    background-color: $kw-green;
+    border-top: 5px solid darken($kw-green, 5%);
 }
 
 
@@ -464,6 +471,7 @@ article {
         clear: both;
         border: 1px solid $bg-grey;
         padding: 10px 20px;
+        background-color: $white;
     }
 
     .ui-tabs-hide {
@@ -485,6 +493,7 @@ article {
 
     .ui-tabs-panel {
         border-color: rgba(255, 255, 255, .1);
+        background-color: transparent;
     }
 }
 
@@ -506,7 +515,7 @@ ul.check {
 
 .intro {
     max-width: 900px;
-    margin: 30px auto 40px auto;
+    margin: 30px auto 80px auto;
     text-align: center;
 }
 
@@ -531,7 +540,7 @@ table {
         font-size: inherit;
         margin: 0;
         overflow: visible; /*to make ths where the title is really long work*/
-        padding: 7px 14px; /* cell padding */
+        padding: 7px 20px; /* cell padding */
     }
 }
 
@@ -545,4 +554,32 @@ table {
 
 .green-bg table thead th {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+table.no-lines {
+    border-color: transparent;
+
+    thead,
+    th,
+    td {
+        border-color: transparent;
+    }
+
+    td {
+        padding: 7px 50px 7px 0;
+    }
+}
+
+
+blockquote {
+    border-left: 5px solid $bg-grey;
+    padding-left: 30px;
+    margin: 20px 0 20px 40px;
+    font-style: italic;
+}
+
+
+ul.split-half {
+    width: 50%;
+    float: left;
 }
