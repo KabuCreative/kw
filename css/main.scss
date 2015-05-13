@@ -71,6 +71,12 @@ body {
     font-family: 'Noto Serif', serif;
     font-style: italic;
     font-size: 20px;
+    border: 0;
+}
+
+.button.small {
+    padding: 7px 12px;
+    font-size: 16px;
 }
 
 .button.primary {
@@ -182,19 +188,55 @@ header {
             }
         }
 
-        #phone {
-            color: $kw-cream;
-            text-decoration: none;
-            font-family: 'Oswald', sans-serif;
+        .under-menu {
             clear: both;
-            display: block;
-            text-align: right;
-            float: right;
-            font-size: 28px;
+
+            #phone {
+                color: $kw-cream;
+                text-decoration: none;
+                font-family: 'Oswald', sans-serif;
+                display: inline-block;
+                text-align: right;
+                float: right;
+                font-size: 28px;
+            }
+
+            .search-button {
+                width: 35px;
+                height: 35px;
+                display: block;
+                float: right;
+                text-align: right;
+                background-color: darken($kw-green, 1.5%);
+                border-radius: 50%;
+                position: relative;
+                top: 2px;
+                margin-right: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+
+                i {
+                    float: none;
+                    position: absolute;
+                    top: 9px;
+                    left: 9px;
+                    font-size: 18px;
+                }
+            }
+
+            .search-input {
+                float: right;
+                width: 150px;
+                border-radius: 3px;
+                border: 0;
+                padding: 4px;
+                margin: 8px 6px 0 0;
+                color: #555;
+                font-family: 'Noto Serif', serif;
+                font-size: 14px;
+            }
         }
     }
 }
-
 
 .banner {
     margin: 0;
@@ -656,11 +698,55 @@ table.insurance-comparison td {
     }
 }
 
-
 hr {
     border: 0;
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     margin: 30px 0;
+}
+
+
+.stat {
+    text-align: center;
+    background-color: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.1);
+    padding: 30px 0;
+
+    span {
+        max-width: 180px;
+        margin: 0 auto;
+        display: block;
+        font-family: 'Oswald';
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .six-thousand,
+    .two-hundred,
+    .eighty,
+    .twenty-six {
+        font-size: 60px;
+    }
+}
+
+
+.bio-photo {
+    width: 37%;
+    float: left;
+    padding-top: 18px;
+
+    h3 {
+        margin-bottom: 0;
+    }
+
+    p.role {
+        font-style: italic;
+        margin-top: 5px;
+    }
+}
+
+.bio-text {
+    width: 60%;
+    float: right;
 }

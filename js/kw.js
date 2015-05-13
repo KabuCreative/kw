@@ -19,4 +19,27 @@ $(document).ready(function(){
     });
 
     $('.tabs').tabs();
+
+    $('.search-input').focus(function() {
+        $(this).animate({
+            width: "300px"
+        }, 300, function() {
+            // Animation complete.
+        });
+    });
+    $('.search-input').blur(function() {
+        $(this).animate({
+            width: "150px"
+        }, 300, function() {
+            // Animation complete.
+        });
+    });
+
+
+
+$(this).animate({
+    width: '150px'
+  }, 500, function() {
+    // Animation complete.
+  });
 });
