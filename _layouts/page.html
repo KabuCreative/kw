@@ -3,17 +3,7 @@ layout: main
 ---
 
 <article>
-<!--
-    <aside class="sidebar">
-        {{ page.sidebar }}
-    </aside>
--->
-
-    <main>
-        {{ content }}
-    </main>
-    <div class="clearfix"></div>
-
+    {{ content }}
 </article>
 
 {% if page.faq %}
@@ -31,5 +21,11 @@ layout: main
 <div class="section desktop tablet">
     <div class="container">
         <p>Testimonials</p>
+    </div>
+</div>
+
+<div class="section desktop mobile tablet">
+    <div class="container">
+        {{ page.aside }}
     </div>
 </div>

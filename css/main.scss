@@ -114,7 +114,7 @@ body {
 }
 
 .container {
-    max-width: 1190px;
+    max-width: 1240px;
     margin: 0 auto;
 }
 
@@ -574,7 +574,7 @@ table.no-lines {
 blockquote {
     border-left: 5px solid $bg-grey;
     padding-left: 30px;
-    margin: 20px 0 20px 40px;
+    margin: 20px 0 40px 40px;
     font-style: italic;
 }
 
@@ -582,4 +582,75 @@ blockquote {
 ul.split-half {
     width: 50%;
     float: left;
+}
+
+
+table.insurance-comparison,
+table.insurance-comparison thead,
+table.insurance-comparison th,
+table.insurance-comparison td {
+    border: none;
+    background-color: transparent;
+}
+
+.insurance-comparison {
+    margin-bottom: 60px;
+
+    thead {
+        th.policy-1,
+        th.policy-2 {
+            width: 33%;
+            padding: 20px;
+            font-weight: normal;
+            text-align: center;
+
+            h4 {
+                margin: 0 0 15px 0;
+                font-size: 20px;
+            }
+        }
+
+        th.policy-1 {
+            background-color: $kw-green;
+            color: $white;
+            border-radius: 3px 0 0 0;
+        }
+
+        th.policy-2 {
+            background-color: lighten($kw-green, 10%);
+            color: $white;
+            border-radius: 0 3px 0 0;
+        }
+    }
+
+    tbody {
+        background-color: $white;
+        border: 1px solid #ececec;
+
+        td {
+            border: 1px solid #ececec;
+            border-right: 1px solid #b4d0c4;
+            text-align: right;
+            font-weight: bold;
+            color: #555;
+        }
+
+        td.policy-1,
+        td.policy-2 {
+            font-weight: normal;
+            text-align: center;
+            border: 1px solid #b4d0c4;
+        }
+
+        td.policy-1 {
+            background-color: #effaf5;
+            color: darken($kw-green, 5%);
+        }
+
+        td.policy-2 {
+            background-color: #f5fdfa;
+            border: 1px solid #b4d0c4;
+            color: $kw-green;
+        }
+    }
 }
