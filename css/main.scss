@@ -30,7 +30,27 @@ img {
 
 h2.center {
     margin-bottom: 60px;
-    font-size: 25px;
+    font-size: 27px;
+
+    &:before,
+    &:after {
+        border-top: 2px solid rgba(0, 0, 0, 0.05);
+        content: "";
+        display: inline-block;
+        height: .1em;
+        position: relative;
+        vertical-align: middle;
+        width: 25%;
+        margin-bottom: 5px;
+    }
+    &:before {
+        right: 30px;
+        margin-left: -50%;
+    }
+    &:after {
+        left: 30px;
+        margin-right: -50%;
+    }
 }
 
 h2.center.w-intro {
@@ -39,6 +59,13 @@ h2.center.w-intro {
 
 p.cta {
     margin-top: 40px;
+}
+
+.image-subtitle {
+    display: block;
+    text-align: center;
+    margin: 5px 0 0 0;
+    font-style: italic;
 }
 
 body {
@@ -147,6 +174,13 @@ body {
 
 .half {
     width: 47%;
+    padding: 0 1.5%;
+    float: left;
+}
+
+
+.three-quarters {
+    width: 72%;
     padding: 0 1.5%;
     float: left;
 }
@@ -387,6 +421,19 @@ article {
             }
         }
     }
+
+    .social-icon {
+        display: inline-block;
+        padding: 12px;
+        border-radius: 50%;
+        background-color: darken($kw-green, 5%);
+        font-size: 25px;
+        width: 25px;
+        height: 25px;
+        line-height: 1;
+        text-align: center;
+        margin: 20px 2px 0 0;
+    }
 }
 
 .sub-footer,
@@ -615,9 +662,9 @@ table.no-lines {
 
 
 blockquote {
-    border-left: 5px solid $bg-grey;
+    border-left: 2px solid $bg-grey;
     padding-left: 30px;
-    margin: 20px 0 40px 40px;
+    margin: 40px 0 60px 40px;
     font-style: italic;
 }
 
@@ -750,4 +797,28 @@ p.role {
 .bio-text {
     width: 60%;
     float: right;
+}
+
+
+aside.quarter {
+    margin-bottom: 20px;
+
+    h4 {
+        margin: 30px 0 15px 50px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0 0 0 50px;
+        list-style-type: none;
+
+        li {
+            margin: 0;
+            padding: 0;
+            display: block;
+            padding: 7px 0;
+            border-bottom: 1px dotted $bg-grey;
+            color: #222;
+        }
+    }
 }
