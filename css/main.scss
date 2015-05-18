@@ -78,16 +78,9 @@ body {
     font-size: 17px;
 }
 
-.clearfix {
-    display: block;
-    clear: both;
-}
-
-
 .center {
     text-align: center;
 }
-
 
 .button {
     background-color: $white;
@@ -153,43 +146,51 @@ body {
 }
 
 .row {
-    margin-left: -1.5%;
+    margin-left: -40px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .margin-top {
     margin-top: 40px;
 }
 
-.two-thirds {
-    width: 63%;
-    padding: 1.5%;
+[class*='col-'] {
     float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.third {
-    width: 30%;
-    padding: 1.5%;
-    float: left;
+[class*='col-'] {
+  padding-left: 40px;
 }
 
-.half {
-    width: 47%;
-    padding: 0 1.5%;
-    float: left;
+.col-1-3 {
+    width: 33.33%;
+}
+
+.col-2-3 {
+    width: 66.66%;
+}
+
+.col-1-2 {
+    width: 50%;
+}
+
+.col-1-4 {
+    width: 25%;
+}
+
+.col-3-4 {
+    width: 75%;
 }
 
 
-.three-quarters {
-    width: 72%;
-    padding: 0 1.5%;
-    float: left;
-}
-
-.quarter {
-    width: 22%;
-    padding: 0 1.5%;
-    float: left;
-}
 
 header {
     background-color: $kw-green;
@@ -271,10 +272,16 @@ header {
     }
 }
 
+.site-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .banner {
     margin: 0;
     padding: 0;
-    background: #1e5232 url('../img/banner-bg.png') no-repeat top center fixed;
+    background: #1e5232 url('../img/banner-bg.jpg') no-repeat top center fixed;
     color: $white;
 
     .site-nav {
@@ -605,7 +612,7 @@ ul.check {
 
 .intro {
     max-width: 900px;
-    margin: 30px auto 80px auto;
+    margin: 30px auto 0 auto;
     text-align: center;
 }
 
@@ -669,9 +676,13 @@ blockquote {
 }
 
 
-ul.split-half {
+ul.split-col-1-2 {
     width: 50%;
     float: left;
+}
+
+.clearfix {
+    clear: both;
 }
 
 
@@ -800,7 +811,7 @@ p.role {
 }
 
 
-aside.quarter {
+aside.col-1-4 {
     margin-bottom: 20px;
 
     h4 {
@@ -821,4 +832,32 @@ aside.quarter {
             color: #222;
         }
     }
+}
+
+
+.art-newsletter {
+
+    p.news-subtitle {
+        font-size: 20px;
+        font-style: italic;
+        margin: 10px 0 20px 0;
+        font-weight: 400;
+    }
+
+    .news-input {
+        border: 1px solid $bg-grey;
+        padding: 6px 5px;
+        margin: 0 5px 20px 0;
+        font-size: 19px;
+        min-width: 300px;
+    }
+}
+
+
+.about-image {
+    margin-bottom: 30px;
+}
+
+.guarantee-conditions {
+    margin-top: 50px;
 }
