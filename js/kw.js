@@ -36,10 +36,23 @@ $(document).ready(function(){
     });
 
 
+    var stickyNavTop = $('.site-nav').offset().top;
 
-$(this).animate({
-    width: '150px'
-  }, 500, function() {
-    // Animation complete.
-  });
+    var stickyNav = function(){
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop > stickyNavTop) {
+            $('.site-nav').addClass('sticky');
+        } else {
+            $('.site-nav').removeClass('sticky');
+        }
+    };
+
+    stickyNav();
+
+    $(window).scroll(function() {
+        stickyNav();
+    });
+
+
 });

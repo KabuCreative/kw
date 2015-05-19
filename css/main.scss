@@ -287,7 +287,7 @@ header {
     color: $white;
 
     .site-nav {
-        background-color: rgba(0, 61, 32, .6);
+        background-color: rgba(0, 61, 32, .9);
 
         .header-container {
             max-width: 1450px;
@@ -852,4 +852,14 @@ aside.col-1-4 {
 .get-quote {
     font-size: 22px;
     padding: 12px 20px;
+}
+
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
 }
