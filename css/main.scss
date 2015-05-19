@@ -305,7 +305,7 @@ header {
             display: none;
         }
 
-        a {
+        ul a {
             color: $white;
             text-transform: uppercase;
             text-decoration: none;
@@ -316,6 +316,12 @@ header {
             &:hover {
                 background-color: darken($kw-green, 5%);
             }
+        }
+
+        .button {
+            float: right;
+            margin-top: 10px;
+            padding: 5px 15px;
         }
     }
 
