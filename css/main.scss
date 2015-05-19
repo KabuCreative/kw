@@ -199,6 +199,8 @@ header {
 .site-header {
     color: $white;
     padding: 15px 0;
+    max-width: 1450px;
+    margin: 0 auto;
 
     a {
         color: $white;
@@ -287,11 +289,20 @@ header {
     .site-nav {
         background-color: rgba(0, 61, 32, .6);
 
+        .header-container {
+            max-width: 1450px;
+            margin: 0 auto;
+        }
+
         ul, li {
             list-style-type: none;
             margin: 0;
             padding: 0;
             display: inline;
+        }
+
+        ul ul {
+            display: none;
         }
 
         a {
@@ -364,38 +375,6 @@ header {
         max-height: 40px;
     }
 }
-
-/*
-article {
-
-    .sidebar {
-        width: 20%;
-        float: right;
-
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-
-            a {
-                line-height: 45px;
-                padding: 0 15px;
-                color: #1a1a1a;
-                display: block;
-                border-top: 1px solid $bg-grey;
-            }
-
-            a:hover {
-                background-color: lighten($bg-grey, 7%);
-            }
-        }
-    }
-
-    main {
-
-    }
-}
-*/
 
 .site-footer {
     background-color: $kw-green;
