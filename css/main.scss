@@ -315,7 +315,7 @@ header {
             font-size: 17px;
 
             &:hover {
-                background-color: darken($kw-green, 5%);
+                background-color: darken($kw-green, 2%);
             }
         }
 
@@ -376,9 +376,13 @@ header {
     text-align: center;
     padding: 10px 0;
     border-bottom: 1px solid darken($bg-grey, 5%);
+    display: table;
+    width: 100%;
 
     img {
-        padding: 0 20px;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 25px;
         border-right: 1px dotted darken($bg-grey, 10%);
     }
 
@@ -390,11 +394,14 @@ header {
 
 .homepage-logos {
     margin-top: 30px;
+    width: 100%;
+    display: table;
 
     img {
+        display: table-cell;
+        vertical-align: middle;
         margin-right: 20px;
-        max-width: 80px;
-        max-height: 40px;
+        padding: 10px;
     }
 }
 
