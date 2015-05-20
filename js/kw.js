@@ -35,7 +35,6 @@ $(document).ready(function(){
         });
     });
 
-
     var stickyNavTop = $('.site-nav').offset().top;
 
     var stickyNav = function(){

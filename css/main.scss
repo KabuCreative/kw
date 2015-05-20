@@ -6,6 +6,7 @@ $kw-green: #00562d;
 $kw-cream: #fff3af;
 $white: #fff;
 $bg-grey: #e0e0e0;
+$dark-grey: #333;
 
 
 h1,
@@ -14,9 +15,12 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: normal;
-    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-weight: 600;
 }
 
 a {
@@ -65,7 +69,6 @@ p.cta {
     display: block;
     text-align: center;
     margin: 5px 0 0 0;
-    font-style: italic;
 }
 
 body {
@@ -75,7 +78,7 @@ body {
     font-weight: 300;
     line-height: 1.4;
     position: relative;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .center {
@@ -145,6 +148,12 @@ body {
     margin: 0 auto;
 }
 
+.wide-container {
+    padding: 0 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .row {
     margin-left: -40px;
 }
@@ -191,7 +200,6 @@ body {
 }
 
 
-
 header {
     background-color: $kw-green;
 }
@@ -199,8 +207,6 @@ header {
 .site-header {
     color: $white;
     padding: 15px 0;
-    max-width: 1450px;
-    margin: 0 auto;
 
     a {
         color: $white;
@@ -231,7 +237,8 @@ header {
             #phone {
                 color: $kw-cream;
                 text-decoration: none;
-                font-family: 'Oswald', sans-serif;
+                font-family: 'Roboto', sans-serif;
+                font-weight: bold;
                 display: inline-block;
                 text-align: right;
                 float: right;
@@ -287,12 +294,7 @@ header {
     color: $white;
 
     .site-nav {
-        background-color: rgba(0, 61, 32, .9);
-
-        .header-container {
-            max-width: 1450px;
-            margin: 0 auto;
-        }
+        background-color: darken($kw-green, 5%);
 
         ul, li {
             list-style-type: none;
@@ -307,51 +309,63 @@ header {
 
         ul a {
             color: $white;
-            text-transform: uppercase;
             text-decoration: none;
-            font-family: 'Oswald', sans-serif;
             display: inline-block;
             padding: 15px 10px;
+            font-size: 17px;
 
             &:hover {
                 background-color: darken($kw-green, 5%);
             }
         }
 
-        .button {
+        .quote-link {
+            border: 2px solid $kw-cream;
+            color: $kw-cream;
+            background-color: transparent;
             float: right;
-            margin-top: 13px;
-            padding: 5px 15px;
-            font-size: 15px;
+            padding: 5px 12px;
+            margin-top: 8px;
+            border-radius: 2px;
         }
     }
 
     .banner-content {
-        padding: 50px 0 30px 0;
+        padding: 50px 0 35px 0;
         text-align: center;
         max-width: 800px;
         margin: 0 auto;
 
         h1 {
-            text-transform: uppercase;
-/*
-            font-family: 'Oswald', sans-serif;
-*/
-            font-weight: normal;
-            font-size: 51px;
-            line-height: 1.2;
+            font-size: 50px;
+            line-height: 1.1;
             margin: 0 0 10px 0;
         }
 
-        p.subtitle {
-            font-size: 27px;
-            font-style: italic;
-            margin: 10px 0 20px 0;
-            font-weight: 400;
+        p {
+            margin: 0;
         }
 
-        p a.button {
+        p.subtitle {
+            font-size: 20px;
+            margin: 0 0 20px 0;
+            font-weight: 600;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        p.about {
             margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .button {
+            font-size: 22px;
+            padding: 12px 20px;
+            margin: 0 0 20px 0;
+            border: 2px solid $white;
+            color: $white;
+            background-color: transparent;
         }
     }
 }
@@ -459,7 +473,7 @@ header {
 
     .quote-tab {
         font-style: italic;
-        background-color: #333;
+        background-color: $dark-grey;
         color: #fff;
         padding: 7px 15px;
         position: absolute;
@@ -468,7 +482,7 @@ header {
     }
 
     .quote-form {
-        background-color: #333;
+        background-color: $dark-grey;
         width: 100%;
         color: $white;
         height: 300px;
@@ -530,7 +544,7 @@ header {
                 background: #f0f0f0;
                 border: 1px #ccc solid;
                 border-bottom: none;
-                color: #333;
+                color: $dark-grey;
                 outline: none;
             }
         }
@@ -761,9 +775,8 @@ hr {
         max-width: 180px;
         margin: 0 auto;
         display: block;
-        font-family: 'Oswald';
-        text-transform: uppercase;
-        font-size: 20px;
+        font-size: 18px;
+        max-width: 150px;
     }
 
     .six-thousand,
@@ -771,6 +784,8 @@ hr {
     .eighty,
     .twenty-six {
         font-size: 60px;
+        font-weight: bold;
+        font-family: 'Roboto';
     }
 }
 
@@ -823,17 +838,23 @@ aside.col-1-4 {
 
 .art-newsletter {
 
+    h2 {
+        margin-bottom: 0;
+    }
+
     p.news-subtitle {
         font-size: 20px;
+/*
         font-style: italic;
-        margin: 10px 0 20px 0;
+*/
+        margin: 5px 0 30px 0;
         font-weight: 400;
     }
 
     .news-input {
         border: 1px solid $bg-grey;
         padding: 6px 5px;
-        margin: 0 5px 20px 0;
+        margin: 0 5px 30px 0;
         font-size: 19px;
         min-width: 300px;
     }
@@ -847,13 +868,6 @@ aside.col-1-4 {
 .guarantee-conditions {
     margin-top: 50px;
 }
-
-
-.get-quote {
-    font-size: 22px;
-    padding: 12px 20px;
-}
-
 
 .sticky {
     position: fixed;
