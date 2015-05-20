@@ -315,8 +315,12 @@ header {
             font-size: 17px;
 
             &:hover {
-                background-color: darken($kw-green, 2%);
+                background-color: $kw-green;
             }
+        }
+
+        ul a.active {
+            background-color: $kw-green;
         }
 
         .quote-link {
