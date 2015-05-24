@@ -96,6 +96,7 @@ body {
 }
 
 .button {
+    background-color: transparent;
     color: $white;
     padding: 9px 20px;
     text-decoration: none;
@@ -176,6 +177,10 @@ body {
     padding: 0 30px;
     max-width: 1440px;
     margin: 0 auto;
+
+    @media only screen and (max-width: 1260px) {
+        padding: 0 20px;
+    }
 }
 
 .row {
@@ -243,22 +248,43 @@ header {
     color: $white;
     padding: 15px 0;
 
+    @media only screen and (max-width: 550px) {
+        padding: 10px 0;
+    }
+
     a {
         color: $white;
     }
 
     .site-title {
         float: left;
+
+        @media only screen and (max-width: 550px) {
+            float: none;
+            text-align: center;
+            display: block;
+
+            img {
+                max-width: 80%;
+            }
+        }
     }
 
     .right {
         float: right;
+
+        @media only screen and (max-width: 550px) {
+            float: none;
+        }
 
         .top-menu {
             float: right;
             margin: 5px 0;
             font-size: 15px;
 
+            @media only screen and (max-width: 1130px) {
+                display: none;
+            }
 
             a {
                 text-decoration: none;
@@ -278,6 +304,26 @@ header {
                 text-align: right;
                 float: right;
                 font-size: 28px;
+
+                @media only screen and (max-width: 1130px) {
+                    margin-top: 20px;
+                }
+
+                @media only screen and (max-width: 550px) {
+                    text-align: center;
+                    display: block;
+                    float: none;
+                    font-size: 22px;
+                    border-top: 1px dotted rgba(255, 255, 255, 0.3);
+                    padding-top: 10px;
+                    margin-top: 10px;
+                }
+            }
+
+            .search {
+                @media only screen and (max-width: 1130px) {
+                    display: none;
+                }
             }
 
             .search-button {
@@ -305,12 +351,7 @@ header {
             .search-input {
                 float: right;
                 width: 150px;
-                border-radius: 3px;
-                border: 0;
-                padding: 4px;
                 margin: 8px 6px 0 0;
-                color: #555;
-                font-size: 14px;
             }
         }
     }
@@ -322,14 +363,29 @@ header {
   clear: both;
 }
 
+.search-input {
+    border-radius: 3px;
+    border: 0;
+    padding: 4px;
+    color: #555;
+    font-size: 14px;
+}
+
 .banner {
     margin: 0;
     padding: 0;
     background: #1e5232 url('../img/banner-bg.jpg') no-repeat top center fixed;
     color: $white;
 
-    .site-nav {
+    .nav {
         background-color: darken($kw-green, 5%);
+    }
+
+    .desktop-nav {
+
+        @media only screen and (max-width: 1130px) {
+            display: none;
+        }
 
         .nav-container {
             position: relative;
@@ -359,32 +415,38 @@ header {
                 display: inline-block;
                 max-width: 17%;
                 word-wrap: break-word;
-                margin: 10px 5px;
+                margin: 10px 5px 5px 0;
             }
         }
 
         ul.dropdown.multi {
-
             .side {
                 display: block;
-                width: 20%;
+                width: 22%;
                 float: left;
-                margin-top: 28px;
+                margin: 25px 0 20px 0;
                 border-top: 1px solid $kw-green;
 
                 li,
                 li a {
                     display: block;
-                    width: 100%;
                     max-width: 100%;
                     padding: 0;
                 }
 
                 li a {
-                    padding: 10px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 3%;
+                    padding-right: 3%;
                     line-height: 1.2;
                     margin: 0;
                     border-bottom: 1px solid $kw-green;
+
+                    @media only screen and (max-width: 1300px) {
+                        padding-top: 9px;
+                        padding-bottom: 9px;
+                    }
 
                     &:hover {
                         background-color: $kw-green;
@@ -396,22 +458,6 @@ header {
                 display: block;
                 width: 75%;
                 float: right;
-
-                .title {
-                    display: block;
-                    width: 100%;
-                    margin-top: 10px;
-
-                    a.sea-title {
-                        display: block;
-                        width: 100%;
-                        max-width: 100%;
-                        padding: 10px 0;
-                        line-height: 1.2;
-                        margin: 0;
-                        border-bottom: 1px solid $kw-green;
-                    }
-                }
             }
 
             ul.countries {
@@ -419,8 +465,23 @@ header {
 
                 li a {
                     max-width: 15.4%;
-                    margin: 10px 10px 10px 0;
+                    margin: 15px 10px 10px 0px;
                     padding: 10px 0;
+
+                    @media only screen and (max-width: 1400px) {
+                        margin-top: 20px;
+                        max-width: 14.5%;
+                        padding: 2px;
+
+                        span.image-subtitle {
+                            font-size: 15px;
+                        }
+                    }
+
+                }
+
+                li a.last {
+                    margin: 0;
                 }
             }
         }
@@ -431,22 +492,89 @@ header {
             display: inline-block;
             padding: 15px 10px;
             font-size: 17px;
+
+            @media only screen and (max-width: 1450px) {
+                padding: 15px 8px;
+            }
+        }
+
+        @media only screen and (max-width: 1380px) {
+            .hide-on-menu {
+                display: none;
+            }
         }
 
         li:hover > a,
         ul a.active {
             background-color: darken($kw-green, 3%);
         }
+    }
 
-        .quote-link {
-            border: 2px solid $kw-cream;
-            color: $kw-cream;
-            background-color: transparent;
-            float: right;
-            padding: 5px 12px;
-            margin-top: 8px;
-            border-radius: 2px;
+    .mobile-nav {
+        display: none;
+
+        .row {
+            margin: 0;
         }
+
+        @media only screen and (max-width: 1130px) {
+            display: block;
+        }
+
+        a {
+            color: $white;
+            text-decoration: none;
+            display: inline-block;
+            float: left;
+            padding: 15px 20px;
+            font-size: 17px;
+            border-left: 1px solid $kw-green;
+            outline: 0;
+
+            &:hover {
+                background-color: darken($kw-green, 3%);
+            }
+        }
+
+        a.search-button {
+            border-right: 1px solid $kw-green;
+        }
+    }
+
+    .desktop-nav .quote-link,
+    .mobile-nav .quote-link {
+        display: inline-block;
+        border: 2px solid $kw-cream;
+        color: $kw-cream;
+        background-color: transparent;
+        padding: 5px 12px;
+        border-radius: 2px;
+        float: right;
+        margin-top: 9px;
+
+        @media only screen and (max-width: 290px) {
+            span {
+                display: none;
+            }
+        }
+    }
+
+    .search-panel {
+        display: none;
+        padding: 10px 0;
+        background-color: darken($kw-green, 3%);
+        text-align: center;
+
+        .search-input {
+            width: 96%;
+            padding: 9px 0;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+    }
+
+    .dropdown-nav {
+        display: none;
     }
 
     .banner-content {
