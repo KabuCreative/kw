@@ -18,8 +18,7 @@ layout: main
     </div>
 {% endif %}
 
-<div class="section desktop tablet">
-    <div class="container">
-        <p>Testimonials</p>
-    </div>
-</div>
+{% if page.testimonials != 'None' %}
+    {% include testimonials.html %}
+{% endif %}
+

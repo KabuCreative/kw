@@ -33,6 +33,7 @@ img {
 }
 
 h2.center {
+    margin-top: 0;
     margin-bottom: 60px;
     font-size: 27px;
 
@@ -55,6 +56,20 @@ h2.center {
         left: 30px;
         margin-right: -50%;
     }
+
+    @media only screen and (max-width: 1260px) {
+        &:before,
+        &:after {
+            width: 15%;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
 }
 
 h2.center.w-intro {
@@ -62,14 +77,9 @@ h2.center.w-intro {
 }
 
 p.cta {
-    margin-top: 40px;
+    margin: 40px 0 0 0;
 }
 
-.image-subtitle {
-    display: block;
-    text-align: center;
-    margin: 5px 0 0 0;
-}
 
 body {
     margin: 0;
@@ -86,8 +96,7 @@ body {
 }
 
 .button {
-    background-color: $white;
-    color: $kw-green;
+    color: $white;
     padding: 9px 20px;
     text-decoration: none;
     line-height: 1.2;
@@ -95,7 +104,7 @@ body {
     border-radius: 3px;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 20px;
-    border: 0;
+    border: 2px solid $white;
 }
 
 .button.small {
@@ -105,6 +114,7 @@ body {
 
 .button.primary {
     background-color: $kw-green;
+    border-color: $kw-green;
     color: $white;
 }
 
@@ -133,22 +143,36 @@ body {
     }
 
     a.button {
-        color: $kw-green;
         text-decoration: none;
     }
 }
 
 .section {
     margin: 0;
-    padding: 50px 0;
+    padding: 60px 0;
+
+/*
+    @media only screen and (max-width: 700px) {
+        padding: 40px 0;
+    }
+
+    @media only screen and (max-width: 350px) {
+        padding: 20px 0;
+    }
+*/
 }
 
 .container {
     max-width: 1240px;
     margin: 0 auto;
+
+    @media only screen and (max-width: 1260px) {
+        padding: 0 20px;
+    }
 }
 
 .wide-container {
+    display: block;
     padding: 0 30px;
     max-width: 1440px;
     margin: 0 auto;
@@ -197,6 +221,17 @@ body {
 
 .col-3-4 {
     width: 75%;
+}
+
+@media only screen and (max-width: 500px) {
+    .row {
+        margin: 0;
+    }
+
+    [class*='col-'] {
+      width: 100%;
+      padding: 0;
+    }
 }
 
 
@@ -296,6 +331,10 @@ header {
     .site-nav {
         background-color: darken($kw-green, 5%);
 
+        .nav-container {
+            position: relative;
+        }
+
         ul, li {
             list-style-type: none;
             margin: 0;
@@ -307,20 +346,96 @@ header {
             display: none;
         }
 
+        ul.dropdown {
+            display: none;
+            background-color: darken($kw-green, 3%);
+            z-index: 200;
+            position: absolute;
+            top: 54px;
+            left: 0;
+            width: 100%;
+
+            li a {
+                display: inline-block;
+                max-width: 17%;
+                word-wrap: break-word;
+                margin: 10px 5px;
+            }
+        }
+
+        ul.dropdown.multi {
+
+            .side {
+                display: block;
+                width: 20%;
+                float: left;
+                margin-top: 28px;
+                border-top: 1px solid $kw-green;
+
+                li,
+                li a {
+                    display: block;
+                    width: 100%;
+                    max-width: 100%;
+                    padding: 0;
+                }
+
+                li a {
+                    padding: 10px;
+                    line-height: 1.2;
+                    margin: 0;
+                    border-bottom: 1px solid $kw-green;
+
+                    &:hover {
+                        background-color: $kw-green;
+                    }
+                }
+            }
+
+            .sea {
+                display: block;
+                width: 75%;
+                float: right;
+
+                .title {
+                    display: block;
+                    width: 100%;
+                    margin-top: 10px;
+
+                    a.sea-title {
+                        display: block;
+                        width: 100%;
+                        max-width: 100%;
+                        padding: 10px 0;
+                        line-height: 1.2;
+                        margin: 0;
+                        border-bottom: 1px solid $kw-green;
+                    }
+                }
+            }
+
+            ul.countries {
+                display: block;
+
+                li a {
+                    max-width: 15.4%;
+                    margin: 10px 10px 10px 0;
+                    padding: 10px 0;
+                }
+            }
+        }
+
         ul a {
             color: $white;
             text-decoration: none;
             display: inline-block;
             padding: 15px 10px;
             font-size: 17px;
-
-            &:hover {
-                background-color: $kw-green;
-            }
         }
 
+        li:hover > a,
         ul a.active {
-            background-color: $kw-green;
+            background-color: darken($kw-green, 3%);
         }
 
         .quote-link {
@@ -335,16 +450,28 @@ header {
     }
 
     .banner-content {
-        padding: 50px 0 35px 0;
+        padding: 50px 20px 35px 20px;
         text-align: center;
-        max-width: 800px;
+        max-width: 760px;
         margin: 0 auto;
         text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+
+        @media only screen and (max-width: 350px) {
+            padding: 30px 10px 20px 10px;
+        }
 
         h1 {
             font-size: 50px;
             line-height: 1.1;
             margin: 0 0 10px 0;
+
+            @media only screen and (max-width: 700px) {
+                font-size: 40px;
+            }
+
+            @media only screen and (max-width: 350px) {
+                font-size: 35px;
+            }
         }
 
         p {
@@ -357,6 +484,14 @@ header {
             font-weight: 600;
             display: inline-block;
             text-transform: uppercase;
+
+            @media only screen and (max-width: 700px) {
+                font-size: 18px;
+            }
+
+            @media only screen and (max-width: 350px) {
+                font-size: 16px;
+            }
         }
 
         p.about {
@@ -368,9 +503,6 @@ header {
             font-size: 22px;
             padding: 12px 20px;
             margin: 0 0 20px 0;
-            border: 2px solid $white;
-            color: $white;
-            background-color: transparent;
         }
     }
 }
@@ -387,13 +519,19 @@ header {
         display: table-cell;
         vertical-align: middle;
         padding: 0 25px;
-        border-right: 1px dotted darken($bg-grey, 10%);
         opacity: 0.9;
+
+        @media only screen and (max-width: 700px) {
+            padding: 0 2%;
+            width: 7%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            padding: 0 2%;
+            width: 8%;
+        }
     }
 
-    .last {
-        border: 0;
-    }
 }
 
 
@@ -406,7 +544,7 @@ header {
         display: table-cell;
         vertical-align: middle;
         margin-right: 20px;
-        padding: 10px;
+        padding: 10px 20px 0 0;
     }
 }
 
@@ -442,17 +580,20 @@ header {
         }
     }
 
-    .social-icon {
-        display: inline-block;
-        padding: 12px;
-        border-radius: 50%;
-        background-color: darken($kw-green, 5%);
-        font-size: 25px;
-        width: 25px;
-        height: 25px;
-        line-height: 1;
-        text-align: center;
-        margin: 20px 2px 0 0;
+    .social-icons {
+
+        a {
+            display: inline-block;
+            padding: 12px;
+            border-radius: 50%;
+            background-color: darken($kw-green, 5%);
+            font-size: 25px;
+            width: 25px;
+            height: 25px;
+            line-height: 1;
+            text-align: center;
+            margin: 20px 2px 0 0;
+        }
     }
 }
 
@@ -504,24 +645,9 @@ header {
 
 .faqs{
     margin-bottom: 40px;
-
-    .ui-icon-down:before,
-    .ui-icon-up:before {
-        font-family: 'FontAwesome';
-        margin-right: 10px;
-    }
-
-    .ui-icon-down:before {
-        content: '\f107';
-    }
-
-    .ui-icon-up:before {
-        content: '\f106';
-    }
-
     strong.q {
         display: block;
-        padding: 10px 0;
+        padding: 10px;
         cursor: pointer;
         border-bottom: 1px solid $bg-grey;
         outline: 0;
@@ -529,10 +655,25 @@ header {
         &:hover {
             background-color: lighten($bg-grey, 7%);
         }
+
+        .ui-icon-down:before,
+        .ui-icon-up:before {
+            font-family: 'FontAwesome';
+            margin-right: 10px;
+        }
+
+        .ui-icon-down:before {
+            content: '\f107';
+        }
+
+        .ui-icon-up:before {
+            content: '\f106';
+        }
+
     }
 
     div {
-        padding-bottom: 20px;
+        padding: 0 0 20px 10px;
     }
 }
 
@@ -710,6 +851,7 @@ table.insurance-comparison td {
 }
 
 .insurance-comparison {
+    margin-top: 10px;
     margin-bottom: 60px;
 
     thead {
@@ -832,12 +974,20 @@ aside.col-1-4 {
 
     h4 {
         margin: 30px 0 15px 50px;
+
+        @media only screen and (max-width: 500px) {
+            margin-left: 0;
+        }
     }
 
     ul {
         margin: 0;
         padding: 0 0 0 50px;
         list-style-type: none;
+
+        @media only screen and (max-width: 500px) {
+            padding: 0;
+        }
 
         li {
             margin: 0;
@@ -859,9 +1009,6 @@ aside.col-1-4 {
 
     p.news-subtitle {
         font-size: 20px;
-/*
-        font-style: italic;
-*/
         margin: 5px 0 30px 0;
         font-weight: 400;
     }
@@ -918,4 +1065,63 @@ aside.col-1-4 {
 
 .right {
     text-align: right;
+}
+
+
+.testimonials {
+    .testimonial {
+        padding: 20px;
+    }
+
+    img {
+        border-radius: 50%;
+        margin-bottom: 20px;
+        float: left;
+        width: 20%;
+    }
+
+    .content {
+        float: right;
+        width: 70%;
+        margin-top: -15px;
+    }
+
+    p {
+        font-style: italic;
+        font-size: 16px;
+    }
+
+    cite {
+        padding-top: 30px;
+        font-weight: bold;
+        font-style: normal;
+    }
+}
+
+
+
+/* Images */
+
+.img-link {
+    display: block;
+    position: relative;
+
+
+    .image-subtitle {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        width: 80%;
+        padding: 0 10%;
+        color: $white;
+        font-size: 18px;
+        font-weight: 600;
+        display: block;
+        text-transform: uppercase;
+        left: 0;
+        text-align: center;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+        line-height: 1.1;
+    }
 }

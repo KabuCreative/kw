@@ -53,5 +53,12 @@ $(document).ready(function(){
         stickyNav();
     });
 
+    $('.dropdown-trigger').on('mouseenter', function(){
+        $(this).find('.dropdown').show();
+    });
+
+    $('.dropdown-trigger').on('mouseleave', function(){
+        $(this).find('.dropdown').hide();
+    });
 
 });
