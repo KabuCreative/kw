@@ -36,15 +36,18 @@ $(document).ready(function(){
         });
     });
 
-    var stickyNavTop = $('.desktop-nav').offset().top;
+    var stickyNavTop = $('.nav').offset().top;
 
     var stickyNav = function(){
         var scrollTop = $(window).scrollTop();
+        var navHeight = $('.nav').height();
 
         if (scrollTop > stickyNavTop) {
             $('.nav').addClass('sticky');
+            $('body').css('paddingTop', navHeight);
         } else {
             $('.nav').removeClass('sticky');
+            $('body').css('paddingTop', 0);
         }
     };
 
@@ -65,11 +68,12 @@ $(document).ready(function(){
     $('body').on('click', '.search-button.trigger', function(e){
         e.preventDefault();
         $('.search-panel').toggle();
+        $(this).toggleClass('active');
     });
 
     $('body').on('click', '.trigger-menu', function(e){
         e.preventDefault();
         $('.dropdown-nav').toggle();
+        $(this).toggleClass('active');
     });
-
 });

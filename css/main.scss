@@ -89,6 +89,7 @@ body {
     line-height: 1.4;
     position: relative;
     font-size: 16px;
+    height: 100%;
 }
 
 .center {
@@ -391,18 +392,11 @@ header {
             position: relative;
         }
 
-        ul, li {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
+        .dropdown-trigger {
             display: inline;
         }
 
-        ul ul {
-            display: none;
-        }
-
-        ul.dropdown {
+        .dropdown {
             display: none;
             background-color: darken($kw-green, 3%);
             z-index: 200;
@@ -411,7 +405,7 @@ header {
             left: 0;
             width: 100%;
 
-            li a {
+            a {
                 display: inline-block;
                 max-width: 17%;
                 word-wrap: break-word;
@@ -419,7 +413,12 @@ header {
             }
         }
 
-        ul.dropdown.multi {
+        .wide-container.row {
+            margin: 0;
+            position: relative;
+        }
+
+        .dropdown.multi {
             .side {
                 display: block;
                 width: 22%;
@@ -427,14 +426,13 @@ header {
                 margin: 25px 0 20px 0;
                 border-top: 1px solid $kw-green;
 
-                li,
-                li a {
+                a {
                     display: block;
                     max-width: 100%;
                     padding: 0;
                 }
 
-                li a {
+                a {
                     padding-top: 10px;
                     padding-bottom: 10px;
                     padding-left: 3%;
@@ -456,16 +454,20 @@ header {
 
             .sea {
                 display: block;
-                width: 75%;
-                float: right;
+                width: 73%;
+                position: absolute;
+                top: 50%;
+                right: 30px;
+                transform: translateY(-50%);
             }
 
-            ul.countries {
+            .countries {
                 display: block;
+                text-align: right;
 
-                li a {
+                a {
                     max-width: 15.4%;
-                    margin: 15px 10px 10px 0px;
+                    margin: 15px 0px 10px 10px;
                     padding: 10px 0;
 
                     @media only screen and (max-width: 1400px) {
@@ -480,13 +482,13 @@ header {
 
                 }
 
-                li a.last {
+                a.first {
                     margin: 0;
                 }
             }
         }
 
-        ul a {
+        a {
             color: $white;
             text-decoration: none;
             display: inline-block;
@@ -504,8 +506,8 @@ header {
             }
         }
 
-        li:hover > a,
-        ul a.active {
+        .dropdown-trigger:hover a,
+        a:hover {
             background-color: darken($kw-green, 3%);
         }
     }
@@ -530,10 +532,11 @@ header {
             font-size: 17px;
             border-left: 1px solid $kw-green;
             outline: 0;
+        }
 
-            &:hover {
-                background-color: darken($kw-green, 3%);
-            }
+        a:hover,
+        a.active {
+            background-color: darken($kw-green, 3%);
         }
 
         a.search-button {
@@ -576,7 +579,7 @@ header {
     .dropdown-nav {
         display: none;
         background-color: darken($kw-green, 3%);
-        padding-bottom: 20px;
+        overflow-y: scroll;
 
         a {
             color: $white;
@@ -612,6 +615,10 @@ header {
             margin: 3px 1px;
             border-radius: 7px;
             font-size: 13px;
+        }
+
+        nav.last {
+            margin-bottom: 20px;
         }
     }
 
