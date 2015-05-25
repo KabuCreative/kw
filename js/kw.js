@@ -18,7 +18,9 @@ $(document).ready(function(){
         }
     });
 
-    $('.tabs').tabs();
+    $('.tabs').responsiveTabs({
+        startCollapsed: 'accordion'
+    });
 
     $('header .search-input').focus(function() {
         $(this).animate({

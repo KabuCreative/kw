@@ -153,15 +153,13 @@ body {
     margin: 0;
     padding: 60px 0;
 
-/*
     @media only screen and (max-width: 700px) {
-        padding: 40px 0;
+        padding: 50px 0;
     }
 
     @media only screen and (max-width: 350px) {
-        padding: 20px 0;
+        padding: 30px 0;
     }
-*/
 }
 
 .container {
@@ -229,7 +227,7 @@ body {
     width: 75%;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
     .row {
         margin: 0;
     }
@@ -237,6 +235,36 @@ body {
     [class*='col-'] {
       width: 100%;
       padding: 0;
+    }
+}
+
+.row.quarters {
+    @media only screen and (max-width: 1000px) {
+        margin: 0;
+
+        [class*='col-'] {
+          width: 100%;
+          padding: 0;
+        }
+    }
+}
+
+.row.thirds {
+    @media only screen and (max-width: 1000px) {
+        margin-left: -20px;
+
+        [class*='col-'] {
+          padding-left: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        margin: 0;
+
+        [class*='col-'] {
+          width: 100%;
+          padding: 0;
+        }
     }
 }
 
@@ -759,6 +787,12 @@ header {
         }
     }
 
+    .twitter {
+        @media only screen and (max-width: 1000px) {
+            display: none;
+        }
+    }
+
     .social-icons {
 
         a {
@@ -772,6 +806,10 @@ header {
             line-height: 1;
             text-align: center;
             margin: 20px 2px 0 0;
+
+            @media only screen and (max-width: 1000px) {
+                margin-top: 0;
+            }
         }
     }
 }
@@ -857,80 +895,159 @@ header {
 }
 
 
-.tabs {
-    zoom: 1;
-    margin: 30px 0 15px 0;
+/* Tabs container */
+.r-tabs {
+    margin-top: 40px;
+    position: relative;
 
-    .ui-tabs-nav {
-        list-style: none;
+    .r-tabs-nav {
         position: relative;
-        padding: 0;
-        margin: 0;
+        top: 1px;
+        z-index: 55;
 
-        li {
+        .r-tabs-tab {
             position: relative;
-            float: left;
-            margin: 0 3px -2px 0;
-            padding: 0;
+            background-color: #ececec;
+            border: 1px solid $bg-grey;
 
-            a {
-                display: block;
-                padding: 10px 20px;
-                background: #f0f0f0;
-                border: 1px #ccc solid;
-                border-bottom: none;
+            .r-tabs-anchor {
+                display: inline-block;
+                padding: 10px 12px;
+                text-decoration: none;
                 color: $dark-grey;
-                outline: none;
             }
         }
 
-        li.ui-state-active a {
-            padding: 10px 20px 12px 20px;
-            background: #fff;
-            position: relative;
-            top: -1px;
+        .r-tabs-state-disabled {
+            opacity: 0.5;
         }
 
-        li.ui-state-active a,
-        li.ui-state-disabled a,
-        li.ui-state-processing a {
-            cursor: default;
+        .r-tabs-state-active {
+            border-bottom-color: $white;
+
+            .r-tabs-anchor {
+                text-shadow: none;
+                background-color: $white;
+            }
         }
     }
 
-    .ui-tabs-panel {
-        display: block;
-        clear: both;
-        border: 1px solid $bg-grey;
-        padding: 10px 20px;
+    .r-tabs-panel {
         background-color: $white;
+        border: 1px solid $bg-grey;
     }
 
-    .ui-tabs-hide {
+    /* Accordion anchor */
+    .r-tabs-accordion-title .r-tabs-anchor {
+        display: block;
+        padding: 10px;
+        background-color: $kw-green;
+        color: $white;
+        text-decoration: none;
+        border-bottom: 1px solid darken($kw-green, 3%);
+    }
+
+    /* Active accordion anchor */
+    .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor {
+        background-color: $white;
+        color: $dark-grey;
+        text-shadow: none;
+        border-top: 1px solid $bg-grey;
+        border-left: 1px solid $bg-grey;
+        border-right: 1px solid $bg-grey;
+        border-bottom: 0;
+    }
+
+    /* Disabled accordion button */
+    .r-tabs-accordion-title.r-tabs-state-disabled {
+        opacity: 0.5;
+    }
+
+    .r-tabs-nav {
+        margin: 0;
+        padding: 0;
+    }
+
+    .r-tabs-tab {
+        display: inline-block;
+        margin: 0;
+        list-style: none;
+    }
+
+    .r-tabs-panel {
+        padding: 15px;
         display: none;
+    }
+
+    .r-tabs-accordion-title {
+        display: none;
+    }
+
+    .r-tabs-panel.r-tabs-state-active {
+        display: block;
     }
 }
 
-.green-bg .tabs {
-    ul li a {
-        background-color: darken($kw-green, 2%);
-        border-color: rgba(255, 255, 255, .1);
-        color: #fff;
-        text-decoration: none;
-    }
-
-    ul li.ui-state-active a {
+.green-bg {
+    .r-tabs {
         background-color: $kw-green;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+        @media only screen and (max-width: 1100px) {
+            border-bottom: 0;
+        }
+
+        .r-tabs-tab {
+            background-color: darken($kw-green, 2%);
+            border-color: rgba(255, 255, 255, 0.2);
+
+            .r-tabs-anchor {
+                color: $white;
+            }
+        }
+
+        .r-tabs-state-active {
+            border-bottom-color: $kw-green;
+
+            .r-tabs-anchor {
+                background-color: $kw-green;
+            }
+        }
     }
 
-    .ui-tabs-panel {
-        border-color: rgba(255, 255, 255, .1);
-        background-color: transparent;
+    .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor {
+        background-color: $white;
+        color: $kw-green;
+        text-shadow: none;
+    }
+
+    .r-tabs-panel {
+        background-color: $kw-green;
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .r-tabs-panel.r-tabs-state-active {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Accordion responsive breakpoint */
+@media only screen and (max-width: 1100px) {
+    .r-tabs .r-tabs-nav {
+        display: none;
+    }
+
+    .r-tabs .r-tabs-accordion-title {
+        display: block;
     }
 }
 
 
 ul.check {
+
+    @media only screen and (max-width: 850px) {
+        padding: 20px;
+    }
 
     li {
         padding: 5px 0;
@@ -941,6 +1058,13 @@ ul.check {
         font-family: 'FontAwesome';
         content: '\f00c';
         margin:0 7px 0 -15px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .no-mobile,
+        ul {
+            display: none;
+        }
     }
 }
 
@@ -1003,11 +1127,19 @@ table.no-lines {
 }
 
 
+// Responsive Tables
+
+
+
 blockquote {
     border-left: 2px solid $bg-grey;
     padding-left: 30px;
     margin: 40px 0 60px 40px;
     font-style: italic;
+
+    @media only screen and (max-width: 1260px) {
+        margin: 40px 40px 60px 0;
+    }
 }
 
 
@@ -1130,6 +1262,16 @@ hr {
     width: 37%;
     float: left;
     padding-top: 18px;
+
+    @media only screen and (max-width: 950px) {
+        float: none;
+        width: 100%;
+        padding-top: 0;
+
+        img {
+            display: none;
+        }
+    }
 }
 
 
@@ -1145,11 +1287,21 @@ p.role {
 .bio-text {
     width: 60%;
     float: right;
+
+    @media only screen and (max-width: 950px) {
+        float: none;
+        width: 100%;
+    }
 }
 
 
 aside.col-1-4 {
     margin-bottom: 20px;
+
+    @media only screen and (max-width: 800px) {
+        width: 100%;
+        margin-top: 40px;
+    }
 
     h4 {
         margin: 30px 0 15px 50px;
@@ -1239,13 +1391,34 @@ aside.col-1-4 {
         display: table-cell;
         vertical-align: middle;
     }
-}
 
+    @media only screen and (max-width: 800px) {
+        display: block;
+        margin: 0;
+        padding: 10px 0;
+        border-left: 2px solid $bg-grey;
+        padding-left: 20px;
+
+        .col-1-3 {
+            display: none;
+        }
+
+        .col-2-3 {
+            width: 100%;
+            float: none;
+            display: block;
+            text-align: left;
+            padding-left: 0;
+        }
+
+
+    }
+
+}
 
 .right {
     text-align: right;
 }
-
 
 .testimonials {
     .testimonial {
@@ -1257,12 +1430,21 @@ aside.col-1-4 {
         margin-bottom: 20px;
         float: left;
         width: 20%;
+
+        @media only screen and (max-width: 850px) {
+            display: none;
+        }
     }
 
     .content {
         float: right;
         width: 70%;
         margin-top: -15px;
+
+        @media only screen and (max-width: 850px) {
+            float: none;
+            width: 100%;
+        }
     }
 
     p {
