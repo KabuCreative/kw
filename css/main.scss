@@ -575,6 +575,44 @@ header {
 
     .dropdown-nav {
         display: none;
+        background-color: darken($kw-green, 3%);
+        padding-bottom: 20px;
+
+        a {
+            color: $white;
+        }
+
+        a.home {
+            display: block;
+            padding: 20px 0;
+            border-bottom: 1px solid $kw-green;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        h3 {
+            margin: 10px 0 0 0;
+            padding: 10px 0;
+            font-size: 14px;
+            text-transform: uppercase;
+
+            a {
+                padding: 0;
+                text-decoration: underline;
+            }
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 7px 9px;
+            color: $white;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 3px 1px;
+            border-radius: 7px;
+            font-size: 13px;
+        }
     }
 
     .banner-content {
@@ -1103,7 +1141,7 @@ aside.col-1-4 {
     h4 {
         margin: 30px 0 15px 50px;
 
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 1450px) {
             margin-left: 0;
         }
     }
@@ -1113,7 +1151,7 @@ aside.col-1-4 {
         padding: 0 0 0 50px;
         list-style-type: none;
 
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 1450px) {
             padding: 0;
         }
 

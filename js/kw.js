@@ -54,17 +54,22 @@ $(document).ready(function(){
         stickyNav();
     });
 
-    $('.dropdown-trigger').on('mouseenter', function(){
+    $('.desktop-nav .dropdown-trigger').on('mouseenter', function(){
         $(this).find('.dropdown').show();
     });
 
-    $('.dropdown-trigger').on('mouseleave', function(){
+    $('.desktop-nav .dropdown-trigger').on('mouseleave', function(){
         $(this).find('.dropdown').hide();
     });
 
     $('body').on('click', '.search-button.trigger', function(e){
         e.preventDefault();
         $('.search-panel').toggle();
+    });
+
+    $('body').on('click', '.trigger-menu', function(e){
+        e.preventDefault();
+        $('.dropdown-nav').toggle();
     });
 
 });
