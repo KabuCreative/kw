@@ -67,13 +67,25 @@ $(document).ready(function(){
 
     $('body').on('click', '.search-button.trigger', function(e){
         e.preventDefault();
+        closeMobileMenu();
         $('.search-panel').toggle();
         $(this).toggleClass('active');
     });
 
     $('body').on('click', '.trigger-menu', function(e){
         e.preventDefault();
+        closeSearchPanel();
         $('.dropdown-nav').toggle();
         $(this).toggleClass('active');
     });
+
+    function closeSearchPanel(){
+        $('.search-panel').hide();
+        $('.search-button.trigger').removeClass('active');
+    };
+
+    function closeMobileMenu(){
+        $('.dropdown-nav').hide();
+        $('.trigger-menu').removeClass('active');
+    };
 });

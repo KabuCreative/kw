@@ -311,13 +311,7 @@ header {
                 }
 
                 @media only screen and (max-width: 550px) {
-                    text-align: center;
-                    display: block;
-                    float: none;
-                    font-size: 22px;
-                    border-top: 1px dotted rgba(255, 255, 255, 0.3);
-                    padding-top: 10px;
-                    margin-top: 10px;
+                    display: none;
                 }
             }
 
@@ -542,6 +536,18 @@ header {
         a.search-button {
             border-right: 1px solid $kw-green;
         }
+
+        a.phone {
+            display: none;
+
+            @media only screen and (max-width: 550px) {
+                display: block;
+                border-right: 1px solid $kw-green;
+                border-left: 0;
+            }
+
+
+        }
     }
 
     .desktop-nav .quote-link,
@@ -555,7 +561,7 @@ header {
         float: right;
         margin-top: 9px;
 
-        @media only screen and (max-width: 290px) {
+        @media only screen and (max-width: 340px) {
             span {
                 display: none;
             }
