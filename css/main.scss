@@ -423,7 +423,7 @@ header {
             background-color: darken($kw-green, 3%);
             z-index: 200;
             position: absolute;
-            top: 54px;
+            top: 53px;
             left: 0;
             width: 100%;
 
@@ -587,7 +587,7 @@ header {
         padding: 5px 12px;
         border-radius: 2px;
         float: right;
-        margin-top: 9px;
+        margin-top: 8px;
 
         @media only screen and (max-width: 340px) {
             span {
@@ -715,16 +715,13 @@ header {
 }
 
 .logos {
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
     padding: 10px 0;
     border-bottom: 1px solid darken($bg-grey, 5%);
-    display: table;
-    width: 100%;
 
     img {
-        display: table-cell;
-        vertical-align: middle;
+        display: inline-block;
         padding: 0 25px;
         opacity: 0.9;
 
@@ -745,11 +742,9 @@ header {
 .homepage-logos {
     margin-top: 30px;
     width: 100%;
-    display: table;
 
     img {
-        display: table-cell;
-        vertical-align: middle;
+        display: inline-block;
         margin-right: 20px;
         padding: 10px 20px 0 0;
     }
@@ -1075,10 +1070,11 @@ ul.check {
     text-align: center;
 }
 
-
 table {
     margin: 30px 0;
     border: 1px solid #cbcbcb;
+    max-width: 100%;
+    overflow-y: scroll;
 
     thead {
         font-weight: bold;
