@@ -626,15 +626,28 @@ header {
 
     .search-panel {
         display: none;
-        padding: 10px 0;
         background-color: darken($kw-green, 3%);
-        text-align: center;
+        padding: 10px 0;
 
         .search-input {
-            width: 96%;
+            width: 80%;
             padding: 9px 0;
             padding-left: 2%;
             padding-right: 2%;
+        }
+
+        .close-search {
+            text-align: right;
+            float: right;
+            color: $white;
+            font-size: 16px;
+            padding: 0 5%;
+            line-height: 38px;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+            position: relative;
+            top: -1px;
         }
     }
 
@@ -642,6 +655,7 @@ header {
         display: none;
         background-color: darken($kw-green, 3%);
         overflow-y: scroll;
+        position: relative;
 
         a {
             color: $white;
@@ -655,6 +669,19 @@ header {
             text-transform: uppercase;
             font-weight: bold;
             text-decoration: underline;
+        }
+
+        a.close-menu {
+            color: $white;
+            font-size: 16px;
+            padding: 0 5%;
+            line-height: 38px;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+            position: absolute;
+            top: 10px;
+            right: 20px;
         }
 
         h3 {
@@ -1633,7 +1660,7 @@ aside.col-1-4 {
 
 .dropdown-nav.art a {
     display: block;
-    padding: 10px 0;
+    padding: 16px 0;
     border-bottom: 1px solid $kw-green;
 }
 
