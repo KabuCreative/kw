@@ -90,4 +90,11 @@ $(document).ready(function(){
         $('.dropdown-nav').hide();
         $('.trigger-menu').removeClass('active');
     };
+
+    $(window).resize(function(){
+        if ($(this).width() > 1130){
+            closeSearchPanel();
+            closeMobileMenu();
+        }
+    });
 });
