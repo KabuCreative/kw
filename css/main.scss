@@ -863,27 +863,13 @@ header {
 
 
 .quote-panel {
-    display: none;
     position: absolute;
-    top: -300px;
     left: 0;
-    height: 300px;
     width: 100%;
-
-    .quote-tab {
-        font-style: italic;
-        background-color: $dark-grey;
-        color: #fff;
-        padding: 7px 15px;
-        position: absolute;
-        bottom: -50px;
-        right: 10%;
-    }
+    background-color: $dark-grey;
+    z-index: 1000;
 
     .quote-form {
-        background-color: $dark-grey;
-        width: 100%;
-        color: $white;
         height: 300px;
     }
 }

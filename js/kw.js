@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $(document).on('click', '.get-quote', function(e){
         e.preventDefault();
-        $('.quote-panel').css('top', 0);
+        $('.quote-panel').toggle();
     });
 
     $('.faqs').accordion({
