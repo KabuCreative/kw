@@ -1,8 +1,6 @@
 $(document).ready(function(){
-    $(document).on('click', '.get-quote', function(e){
-        e.preventDefault();
-        $('.quote-panel').toggle();
-    });
+
+    // FAQ accordions and tabs
 
     $('.faqs').accordion({
         header: 'strong',
@@ -21,6 +19,8 @@ $(document).ready(function(){
     $('.tabs').responsiveTabs({
         startCollapsed: 'accordion'
     });
+
+    // Header and nav
 
     $('header .search-input').focus(function() {
         $(this).animate({
@@ -120,4 +120,87 @@ $(document).ready(function(){
             setDropdownHeight();
         }
     });
+
+    // Forms
+
+    $(document).on('click', '.get-quote', function(e){
+        e.preventDefault();
+        $('.quote-panel').toggle();
+    });
+
+    $(document).on('click', '.close-quote', function(e){
+        e.preventDefault();
+        $('.quote-panel').hide();
+    });
+
+
+
+    function setMoveType(){
+        moveType = $('#move-type :selected').attr('value');
+
+        if (moveType === 'whole'){
+            $('.whole-home').show();
+        } else if (moveType === 'small') {
+            $('.small-move').show();
+        }
+    }
+
+    setMoveType();
+
+    function setMoveLocation(){
+        moveLocation = $('#move-location :selected').attr('value');
+
+        if (moveLocation === 'local'){
+            $('.local').show();
+        } else if (moveLocation === 'international') {
+            $('.international').show();
+        }
+    }
+
+    setMoveLocation();
+
+    function setFromCountry(){
+        country = $('#from-country :selected').attr('value');
+
+        if (country === 'australia'){
+            $('.from.australia').show();
+        } else if (country === 'nz') {
+            $('.from.nz').show();
+        }
+    }
+
+    setFromCountry();
+
+    function setToCountry(){
+        country = $('#to-country :selected').attr('value');
+
+        if (country === 'uk'){
+            $('.to.uk').show();
+        } else if (country === 'nz') {
+            $('.to.nz').show();
+        }
+    }
+
+    setToCountry();
+
+    $(document).on('change', '#move-type', function() {
+        $('.move-type').hide();
+        setMoveType();
+    });
+
+    $(document).on('change', '#move-location', function() {
+        $('.move-location').hide();
+        setMoveLocation();
+    });
+
+    $(document).on('change', '#from-country', function() {
+        $('.from').hide();
+        setFromCountry();
+    });
+
+    $(document).on('change', '#to-country', function() {
+        $('.to').hide();
+        setToCountry();
+    });
+
 });
