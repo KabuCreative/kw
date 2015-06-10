@@ -163,9 +163,9 @@ $(document).ready(function(){
         country = $('#from-country :selected').attr('value');
 
         if (country === 'australia'){
-            $('.from.australia').show();
+            $('.from.australia').css('display', 'inline');
         } else if (country === 'nz') {
-            $('.from.nz').show();
+            $('.from.nz').css('display', 'inline');
         }
     }
 
@@ -175,9 +175,9 @@ $(document).ready(function(){
         country = $('#to-country :selected').attr('value');
 
         if (country === 'uk'){
-            $('.to.uk').show();
+            $('.to.uk').css('display', 'inline');
         } else if (country === 'nz') {
-            $('.to.nz').show();
+            $('.to.nz').css('display', 'inline');
         }
     }
 

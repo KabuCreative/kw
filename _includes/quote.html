@@ -1,13 +1,12 @@
 <div class="quote-panel">
     <div class="quote">
-<!--
         <h2>Quick Quote</h2>
         <p class="intro">All quotes delivered within 12 business hours.</p>
         <p class="intro">Need a quote faster?  Call us on 1300 368 893</p>
         <a href="#" class="close-quote"><i class="fa fa-times"></i></a>
 
         <form class="quote-form">
-            <fieldset>
+            <fieldset class="move-details">
                 <legend>How much are you moving?</legend>
                 <select id="move-type">
                     <option disabled selected>- Select move quantity -</option>
@@ -34,9 +33,6 @@
                         <option>Apartment</option>
                     </select>
                 </div>
-            </fieldset>
-
-            <fieldset>
                 <legend>Where?</legend>
                 <select id="move-location">
                     <option disabled selected>- Select move type -</option>
@@ -45,16 +41,16 @@
                 </select>
 
                 <div class="move-location local">
-                    <label>From</label>
+                    <label class="margin-right">From</label>
                     <input type="text" name="" value="" id="" placeholder="Suburb or Postcode"/>
 
-                    <label>To</label>
+                    <label class="margin-left margin-right">To</label>
                     <input type="text" name="" value="" id="" placeholder="Suburb or Postcode"/>
                 </div>
 
                 <div class="move-location international">
                     <div>
-                        <label class="mid">From</label>
+                        <label class="margin-right">From</label>
 
                         <select id="from-country">
                             <option value="australia">Australia</option>
@@ -75,7 +71,7 @@
                     </div>
 
                     <div>
-                        <label class="mid">To</label>
+                        <label class="margin-right">To</label>
 
                         <select id="to-country">
                             <option value="uk">UK</option>
@@ -101,7 +97,7 @@
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="customer-details">
                 <legend>When?</legend>
                 <select>
                     <option disabled selected>- Select estimated move date -</option>
@@ -111,9 +107,6 @@
                     <option>August 2015</option>
                     <option>September 2015</option>
                 </select>
-            </fieldset>
-
-            <fieldset>
                 <legend>About You</legend>
                 <label>Name</label>
                 <input type="text" name="" value="" id="" />
@@ -135,8 +128,9 @@
                 </div>
             </fieldset>
 
+            <div class="clearfix"></div>
+
             <input class="button" type="submit" value="Get Quote">
         </form>
--->
     </div>
 </div>

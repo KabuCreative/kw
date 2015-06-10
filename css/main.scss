@@ -768,8 +768,12 @@ header {
 }
 
 
+.no-bottom-margin {
+    margin-bottom: 0;
+}
+
 .homepage-logos {
-    margin-top: 30px;
+    margin: 0;
     width: 100%;
 
     @media only screen and (max-width: 635px) {
@@ -779,7 +783,8 @@ header {
     img {
         display: inline-block;
         margin-right: 20px;
-        padding: 10px 20px 0 0;
+        padding: 20px 5px 5px 0;
+        max-height: 30px;
     }
 }
 
@@ -875,7 +880,7 @@ header {
     z-index: 1000;
 
     .quote {
-        max-width: 900px;
+        max-width: 1020px;
         margin: 0 auto;
 
         .close-quote {
@@ -901,12 +906,23 @@ header {
         }
     }
 
+    .move-details {
+        float: left;
+        width: 480px;
+    }
+
+    .customer-details {
+        float: right;
+        width: 480px;
+    }
+
     .quote-form {
-        padding: 20px 0;
-        text-align: center;
+        width: 1020px;
+        text-align: left;
 
         fieldset {
             border:0;
+            padding: 0;
 
             legend {
                 font-family: 'Roboto';
@@ -915,8 +931,8 @@ header {
                 border-bottom: 1px solid rgba(255, 255, 255, 0.2);
                 display: block;
                 width: 100%;
-                margin: 10px 0;
-                padding: 10px 0;
+                margin: 10px 0 10px 0;
+                padding: 0;
 
             }
         }
@@ -934,7 +950,6 @@ header {
             border-radius: 3px;
             border: 1px solid darken($kw-green, 9%);
             background-color: $white;
-            min-width: 180px;
             margin-bottom: 10px;
 /*
             margin-right: 10px;
@@ -946,8 +961,26 @@ header {
         .from,
         .to {
             display: none;
+
+            input {
+                max-width: 160px;
+            }
         }
+
+        .move-location .international input,
+        .move-location .international select {
+            float: left;
+        }
+
     }
+}
+
+label.margin-left {
+    margin-left: 5px;
+}
+
+label.margin-right {
+    margin-right: 5px;
 }
 
 .faqs{
