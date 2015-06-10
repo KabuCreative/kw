@@ -458,7 +458,7 @@ header {
 
             a {
                 display: inline-block;
-                max-width: 17%;
+                max-width: 14.4%;
                 word-wrap: break-word;
                 margin: 10px 5px 5px 0;
             }
@@ -820,6 +820,10 @@ header {
     background-image: url('../img/banners/adelaide.jpg');
 }
 
+.banner.storage {
+    background-image: url('../img/banners/storage.jpg');
+}
+
 .banner.international-vehicles {
 
 }
@@ -829,15 +833,15 @@ header {
 }
 
 .banner.pets {
-
+    background-image: url('../img/banners/pets.jpg');
 }
 
 .banner.insurance {
-
+    background-image: url('../img/banners/insurance.jpg');
 }
 
 .banner.corporate {
-
+    background-image: url('../img/banners/corporate.jpg');
 }
 
 .logos {
