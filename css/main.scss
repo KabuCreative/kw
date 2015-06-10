@@ -426,7 +426,7 @@ header {
 .banner {
     margin: 0;
     padding: 0;
-    background: #1e5232 url('../img/banner-bg.jpg') no-repeat top center fixed;
+    background: #1e5232 url('../img/banners/standard.jpg') no-repeat top center fixed;
     color: $white;
 
     .nav {
@@ -741,6 +741,103 @@ header {
             margin: 0 0 20px 0;
         }
     }
+}
+
+.banner.air-freight {
+    background-image: url('../img/banners/air-freight.jpg');
+}
+
+.banner.sea-freight {
+    background-image: url('../img/banners/sea-freight.jpg');
+
+}
+
+.banner.baggage {
+    background-image: url('../img/banners/baggage.jpg');
+}
+
+.banner.guarantee {
+    background-image: url('../img/banners/guarantee.jpg');
+}
+
+.banner.uk {
+    background-image: url('../img/banners/uk.jpg');
+}
+
+.banner.nz {
+    background-image: url('../img/banners/nz.jpg');
+}
+
+.banner.europe {
+    background-image: url('../img/banners/europe.jpg');
+}
+
+.banner.north-america {
+    background-image: url('../img/banners/north-america.jpg');
+}
+
+.banner.singapore {
+    background-image: url('../img/banners/singapore.jpg');
+}
+
+.banner.hong-kong {
+    background-image: url('../img/banners/hong-kong.jpg');
+}
+
+.banner.australia {
+    background-image: url('../img/banners/australia.jpg');
+}
+
+.banner.south-africa {
+    background-image: url('../img/banners/south-africa.jpg');
+}
+
+.banner.middle-east {
+    background-image: url('../img/banners/middle-east.jpg');
+}
+
+.banner.melbourne {
+    background-image: url('../img/banners/melbourne.jpg');
+}
+
+.banner.sydney {
+    background-image: url('../img/banners/sydney.jpg');
+}
+
+.banner.canberra {
+    background-image: url('../img/banners/canberra.jpg');
+}
+
+.banner.perth {
+    background-image: url('../img/banners/perth.jpg');
+}
+
+.banner.brisbane {
+    background-image: url('../img/banners/brisbane.jpg');
+}
+
+.banner.adelaide {
+    background-image: url('../img/banners/adelaide.jpg');
+}
+
+.banner.international-vehicles {
+
+}
+
+.banner.interstate-vehicles {
+
+}
+
+.banner.pets {
+
+}
+
+.banner.insurance {
+
+}
+
+.banner.corporate {
+
 }
 
 .logos {
