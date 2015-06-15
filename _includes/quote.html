@@ -1,13 +1,71 @@
 <div class="quote-panel">
     <div class="quote">
-        <h2>Quick Quote</h2>
-        <p class="intro">All quotes delivered within 12 business hours.</p>
-        <p class="intro">Need a quote faster?  Call us on 1300 368 893</p>
+        <p>All quotes delivered within 12 business hours. <strong>Need a quote faster?  Call us on 1300 368 893</strong></p>
         <a href="#" class="close-quote"><i class="fa fa-times"></i></a>
 
         <form class="quote-form">
             <fieldset class="move-details">
+                <legend>Move Type</legend>
+                <label>I'm moving...</label>
+                <select id="move-location">
+                    <option disabled selected>- Select move type -</option>
+                    <option value="international">Overseas</option>
+                    <option value="local">Within Australia (Local or Interstate)</option>
+                </select>
+
+                <div class="move-location local">
+                    <div>
+                        <label>From</label>
+                        <input type="text" name="" value="" id="" placeholder="Suburb or Postcode"/>
+                    </div>
+
+                    <div>
+                        <label>To</label>
+                        <input type="text" name="" value="" id="" placeholder="Suburb or Postcode"/>
+                    </div>
+                </div>
+
+                <div class="move-location international">
+                    <div>
+                        <label>From</label>
+
+                        <select id="from-country" class="half">
+                            <option value="australia">Australia</option>
+                            <option value="nz">New Zealand</option>
+                        </select>
+
+                        <input type="text" name="" value="" id="" placeholder="Suburb or Postcode" class="from australia half"/>
+
+                        <select class="from nz half">
+                            <option>Type Location...</option>
+                            <option>Wellington</option>
+                            <option>Auckland</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>To</label>
+
+                        <select id="to-country" class="half">
+                            <option value="uk">UK</option>
+                            <option value="nz">New Zealand</option>
+                        </select>
+
+                        <select class="to uk half">
+                            <option>Type Location...</option>
+                            <option>London</option>
+                            <option>Edinburgh</option>
+                        </select>
+
+                        <select class="to nz half">
+                            <option>Type Location...</option>
+                            <option>Wellington</option>
+                            <option>Auckland</option>
+                        </select>
+                    </div>
+                </div>
                 <legend>How much are you moving?</legend>
+                <label>Move quantity</label>
                 <select id="move-type">
                     <option disabled selected>- Select move quantity -</option>
                     <option value="whole">A whole home (personal effects including some/all furniture)</option>
@@ -19,7 +77,9 @@
                 </div>
 
                 <div class="whole-home move-type">
-                    <select>
+                    <label>Size</label>
+
+                    <select class="half">
                         <option>1 bedroom</option>
                         <option>2 bedroom</option>
                         <option>3 bedroom</option>
@@ -28,77 +88,17 @@
                         <option>6 bedroom</option>
                     </select>
 
-                    <select>
+                    <select class="half">
                         <option>House</option>
                         <option>Apartment</option>
                     </select>
-                </div>
-                <legend>Where?</legend>
-                <select id="move-location">
-                    <option disabled selected>- Select move type -</option>
-                    <option value="international">Overseas</option>
-                    <option value="local">Within Australia (Local or Interstate)</option>
-                </select>
-
-                <div class="move-location local">
-                    <label class="margin-right">From</label>
-                    <input type="text" name="" value="" id="" placeholder="Suburb or Postcode"/>
-
-                    <label class="margin-left margin-right">To</label>
-                    <input type="text" name="" value="" id="" placeholder="Suburb or Postcode"/>
-                </div>
-
-                <div class="move-location international">
-                    <div>
-                        <label class="margin-right">From</label>
-
-                        <select id="from-country">
-                            <option value="australia">Australia</option>
-                            <option value="nz">New Zealand</option>
-                        </select>
-
-                        <div class="from australia">
-                            <input type="text" name="" value="" id="" placeholder="Suburb or Postcode"/>
-                        </div>
-
-                        <div class="from nz">
-                            <select>
-                                <option>Type Location...</option>
-                                <option>Wellington</option>
-                                <option>Auckland</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="margin-right">To</label>
-
-                        <select id="to-country">
-                            <option value="uk">UK</option>
-                            <option value="nz">New Zealand</option>
-                        </select>
-
-                        <div class="to uk">
-                            <select>
-                                <option>Type Location...</option>
-                                <option>London</option>
-                                <option>Edinburgh</option>
-                            </select>
-                        </div>
-
-                        <div class="to nz">
-                            <select>
-                                <option>Type Location...</option>
-                                <option>Wellington</option>
-                                <option>Auckland</option>
-                            </select>
-                        </div>
-                    </div>
                 </div>
             </fieldset>
 
             <fieldset class="customer-details">
                 <legend>When?</legend>
+
+                <label>Move date</label>
                 <select>
                     <option disabled selected>- Select estimated move date -</option>
                     <option>May 2015</option>
@@ -108,14 +108,21 @@
                     <option>September 2015</option>
                 </select>
                 <legend>About You</legend>
-                <label>Name</label>
-                <input type="text" name="" value="" id="" />
 
-                <label for="">Email</label>
-                <input type="email" name="" value="" id="" />
+                <div>
+                    <label>Name</label>
+                    <input type="text" name="" value="" id="" />
+                </div>
 
-                <label for="">Phone</label>
-                <input type="text" name="" value="" id="" />
+                <div>
+                    <label for="">Email</label>
+                    <input type="email" name="" value="" id="" />
+                </div>
+
+                <div>
+                    <label for="">Phone</label>
+                    <input type="text" name="" value="" id="" />
+                </div>
 
                 <div class="">
                     <label>
