@@ -125,12 +125,15 @@ $(document).ready(function(){
 
     $(document).on('click', '.get-quote', function(e){
         e.preventDefault();
-        $('.quote-panel').toggle();
+        $('.quote-overlay').toggle();
+        $('#quote').toggle();
     });
 
     $(document).on('click', '.close-quote', function(e){
         e.preventDefault();
-        $('.quote-panel').hide();
+        $('.quote-overlay').hide();
+        $('#quote').hide();
+
     });
 
 

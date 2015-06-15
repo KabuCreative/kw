@@ -1,140 +1,141 @@
-<div class="quote-panel">
-    <div class="quote">
-        <p>All quotes delivered within 12 business hours. <strong>Need a quote faster?  Call us on 1300 368 893</strong></p>
-        <a href="#" class="close-quote"><i class="fa fa-times"></i></a>
+<div class="quote-overlay"></div>
 
-        <form class="quote-form">
-            <fieldset class="move-details">
-                <legend>Move Details</legend>
-                <label>I'm moving...</label>
-                <select id="move-location">
-                    <option disabled selected>- Select move type -</option>
-                    <option value="international">Overseas</option>
-                    <option value="local">Within Australia (Local or Interstate)</option>
-                </select>
+<div id="quote">
+    <p>All quotes delivered within 12 business hours. <strong>Need a quote faster?  Call us on 1300 368 893</strong></p>
+    <a href="#" class="close-quote"><i class="fa fa-times"></i></a>
 
-                <div class="move-location local">
-                    <div>
-                        <label>From</label>
-                        <input type="text" name="" value="" id="" placeholder="Suburb or Postcode"/>
-                    </div>
+    <form class="quote-form">
+        <fieldset class="move-details">
+            <legend>Move Details</legend>
+            <label>I'm moving...</label>
+            <select id="move-location">
+                <option disabled selected>- Select move type -</option>
+                <option value="international">Overseas</option>
+                <option value="local">Within Australia (Local or Interstate)</option>
+            </select>
 
-                    <div>
-                        <label>To</label>
-                        <input type="text" name="" value="" id="" placeholder="Suburb or Postcode"/>
-                    </div>
+            <div class="move-location local">
+                <div>
+                    <label>From</label>
+                    <input type="text" name="" value="" id="" placeholder="Suburb or Postcode"/>
                 </div>
 
-                <div class="move-location international">
-                    <div>
-                        <label>From</label>
-
-                        <select id="from-country" class="half">
-                            <option value="australia">Australia</option>
-                            <option value="nz">New Zealand</option>
-                        </select>
-
-                        <input type="text" name="" value="" id="" placeholder="Suburb or Postcode" class="from australia half"/>
-
-                        <select class="from nz half">
-                            <option>Type Location...</option>
-                            <option>Wellington</option>
-                            <option>Auckland</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label>To</label>
-
-                        <select id="to-country" class="half">
-                            <option value="uk">UK</option>
-                            <option value="nz">New Zealand</option>
-                        </select>
-
-                        <select class="to uk half">
-                            <option>Type Location...</option>
-                            <option>London</option>
-                            <option>Edinburgh</option>
-                        </select>
-
-                        <select class="to nz half">
-                            <option>Type Location...</option>
-                            <option>Wellington</option>
-                            <option>Auckland</option>
-                        </select>
-                    </div>
+                <div>
+                    <label>To</label>
+                    <input type="text" name="" value="" id="" placeholder="Suburb or Postcode"/>
                 </div>
-                <label>Move quantity</label>
-                <select id="move-type">
-                    <option disabled selected>- Select move quantity -</option>
-                    <option value="whole">A whole home (personal effects including some/all furniture)</option>
-                    <option value="small">A small move (a few bags and boxes, no furniture)</option>
-                </select>
+            </div>
 
-                <div class="small-move move-type">
-                    instant quote form here
-                </div>
+            <div class="move-location international">
+                <div>
+                    <label>From</label>
 
-                <div class="whole-home move-type">
-                    <label>Size</label>
-
-                    <select class="half">
-                        <option>1 bedroom</option>
-                        <option>2 bedroom</option>
-                        <option>3 bedroom</option>
-                        <option>4 bedroom</option>
-                        <option>5 bedroom</option>
-                        <option>6 bedroom</option>
+                    <select id="from-country" class="half">
+                        <option value="australia">Australia</option>
+                        <option value="nz">New Zealand</option>
                     </select>
 
-                    <select class="half">
-                        <option>House</option>
-                        <option>Apartment</option>
+                    <input type="text" name="" value="" id="" placeholder="Suburb or Postcode" class="from australia half"/>
+
+                    <select class="from nz half">
+                        <option>Type Location...</option>
+                        <option>Wellington</option>
+                        <option>Auckland</option>
                     </select>
                 </div>
 
-                <label>Move date</label>
-                <select>
-                    <option disabled selected>- Select estimated move date -</option>
-                    <option>May 2015</option>
-                    <option>June 2015</option>
-                    <option>July 2015</option>
-                    <option>August 2015</option>
-                    <option>September 2015</option>
+                <div>
+                    <label>To</label>
+
+                    <select id="to-country" class="half">
+                        <option value="uk">UK</option>
+                        <option value="nz">New Zealand</option>
+                    </select>
+
+                    <select class="to uk half">
+                        <option>Type Location...</option>
+                        <option>London</option>
+                        <option>Edinburgh</option>
+                    </select>
+
+                    <select class="to nz half">
+                        <option>Type Location...</option>
+                        <option>Wellington</option>
+                        <option>Auckland</option>
+                    </select>
+                </div>
+            </div>
+            <label>Move quantity</label>
+            <select id="move-type">
+                <option disabled selected>- Select move quantity -</option>
+                <option value="whole">A whole home (personal effects including some/all furniture)</option>
+                <option value="small">A small move (a few bags and boxes, no furniture)</option>
+            </select>
+
+            <div class="small-move move-type">
+                instant quote form here
+            </div>
+
+            <div class="whole-home move-type">
+                <label>Size</label>
+
+                <select class="half">
+                    <option>1 bedroom</option>
+                    <option>2 bedroom</option>
+                    <option>3 bedroom</option>
+                    <option>4 bedroom</option>
+                    <option>5 bedroom</option>
+                    <option>6 bedroom</option>
                 </select>
-            </fieldset>
 
-            <fieldset class="customer-details">
-                <legend>About You</legend>
+                <select class="half">
+                    <option>House</option>
+                    <option>Apartment</option>
+                </select>
+            </div>
 
-                <div>
-                    <label>Name</label>
-                    <input type="text" name="" value="" id="" />
-                </div>
+            <label>Move date</label>
+            <select>
+                <option disabled selected>- Select estimated move date -</option>
+                <option>May 2015</option>
+                <option>June 2015</option>
+                <option>July 2015</option>
+                <option>August 2015</option>
+                <option>September 2015</option>
+            </select>
+        </fieldset>
 
-                <div>
-                    <label for="">Email</label>
-                    <input type="email" name="" value="" id="" />
-                </div>
+        <fieldset class="customer-details">
+            <legend>About You</legend>
 
-                <div>
-                    <label for="">Phone</label>
-                    <input type="text" name="" value="" id="" />
-                </div>
+            <div>
+                <label>Name</label>
+                <input type="text" name="" value="" id="" />
+            </div>
 
-                <label class="checkbox">
-                    <input type="checkbox" name="" value="" /> I require storage
-                </label>
-                <label class="checkbox">
-                    <input type="checkbox" name="" value="" id="show-voucher" /> I have a voucher
-                </label>
+            <div>
+                <label for="">Email</label>
+                <input type="email" name="" value="" id="" />
+            </div>
 
-                <input type="text" name="" value="" id="" class="voucher" placeholder="Voucher Code"/>
+            <div>
+                <label for="">Phone</label>
+                <input type="text" name="" value="" id="" />
+            </div>
 
-                <div class="submit-form">
-                    <input class="button" type="submit" value="Get Quote">
-                </div>
-            </fieldset>
-        </form>
-    </div>
+            <label class="checkbox">
+                <input type="checkbox" name="" value="" /> I require storage
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" name="" value="" id="show-voucher" /> I have a voucher
+            </label>
+
+            <input type="text" name="" value="" id="" class="voucher" placeholder="Voucher Code"/>
+
+            <div class="submit-form">
+                <input class="button" type="submit" value="Get Quote">
+            </div>
+        </fieldset>
+        <div class="clearfix"></div>
+    </form>
 </div>

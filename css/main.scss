@@ -101,6 +101,9 @@ body {
     height: 100%;
 }
 
+html, body{
+  min-height: 100%;
+}
 .center {
     text-align: center;
 }
@@ -2069,28 +2072,45 @@ textarea {
     margin: 20px 0;
 }
 
-
-.quote-panel {
+.quote-overlay {
     display: none;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 50, 26, .95);
-    color: $white;
+    background-color: rgba(0, 0, 0, .4);
     z-index: 1000;
+}
 
-    .quote {
-        max-width: 1000px;
-        margin: 40px auto 0 auto;
+#quote {
+    position: fixed;
+    display: none;
+    width: 1000px;
+    top: 50%;
+    left: 50%;
+    z-index: 2000;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: $white;
+    max-height: 85%;
+    overflow-y: auto;
+    background-color: $kw-green;
+    padding: 20px;
+    border: 2px solid $white;
 
-        .close-quote {
-            color: #fff;
-            position: absolute;
-            right: 25px;
-            top: 15px;
-        }
+    @media only screen and (max-width: 1060px) {
+        max-width: 480px;
+    }
+
+    .close-quote {
+        color: #fff;
+        position: absolute;
+        right: 15px;
+        top: 10px;
     }
 
     .quote-form {
@@ -2100,6 +2120,11 @@ textarea {
         .move-details,
         .customer-details {
             width: 480px;
+
+            @media only screen and (max-width: 1060px) {
+                width: 100%;
+                float: none;
+            }
         }
 
         .move-details {
@@ -2181,6 +2206,5 @@ textarea {
             margin-top: 20px;
             margin-left: 25%;
         }
-
     }
 }
