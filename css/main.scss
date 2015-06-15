@@ -509,6 +509,10 @@ header {
                 position: absolute;
                 top: 50%;
                 right: 30px;
+                -moz-transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
             }
 
@@ -1594,7 +1598,12 @@ hr {
         position: absolute;
         left: 50%;
         top: 50%;
+        -moz-transform: translate(-50%, -40%);
+        -webkit-transform: translate(-50%, -40%);
+        -o-transform: translate(-50%, -40%);
+        -ms-transform: translate(-50%, -40%);
         transform: translate(-50%, -40%);
+
     }
 
     span {
@@ -1866,6 +1875,10 @@ aside.col-1-4 {
         position: absolute;
         top: 50%;
         left: 50%;
+        -moz-transform: translate(-50%, -40%);
+        -webkit-transform: translate(-50%, -40%);
+        -o-transform: translate(-50%, -40%);
+        -ms-transform: translate(-50%, -40%);
         transform: translate(-50%, -40%);
         display: block;
         width: 80%;
