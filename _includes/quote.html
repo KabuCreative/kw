@@ -5,7 +5,7 @@
 
         <form class="quote-form">
             <fieldset class="move-details">
-                <legend>Move Type</legend>
+                <legend>Move Details</legend>
                 <label>I'm moving...</label>
                 <select id="move-location">
                     <option disabled selected>- Select move type -</option>
@@ -64,7 +64,6 @@
                         </select>
                     </div>
                 </div>
-                <legend>How much are you moving?</legend>
                 <label>Move quantity</label>
                 <select id="move-type">
                     <option disabled selected>- Select move quantity -</option>
@@ -93,10 +92,6 @@
                         <option>Apartment</option>
                     </select>
                 </div>
-            </fieldset>
-
-            <fieldset class="customer-details">
-                <legend>When?</legend>
 
                 <label>Move date</label>
                 <select>
@@ -107,6 +102,9 @@
                     <option>August 2015</option>
                     <option>September 2015</option>
                 </select>
+            </fieldset>
+
+            <fieldset class="customer-details">
                 <legend>About You</legend>
 
                 <div>
@@ -124,20 +122,19 @@
                     <input type="text" name="" value="" id="" />
                 </div>
 
-                <div class="">
-                    <label>
-                        <input type="checkbox" name="" value="" /> I require storage
-                    </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="" value="" /> I require storage
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="" value="" id="show-voucher" /> I have a voucher
+                </label>
 
-                    <label>
-                        <input type="checkbox" name="" value="" /> I have a voucher code
-                    </label>
+                <input type="text" name="" value="" id="" class="voucher" placeholder="Voucher Code"/>
+
+                <div class="submit-form">
+                    <input class="button" type="submit" value="Get Quote">
                 </div>
             </fieldset>
-
-            <div class="clearfix"></div>
-
-            <input class="button" type="submit" value="Get Quote">
         </form>
     </div>
 </div>

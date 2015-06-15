@@ -2070,7 +2070,6 @@ textarea {
 }
 
 
-
 .quote-panel {
     display: none;
     position: absolute;
@@ -2083,7 +2082,7 @@ textarea {
     z-index: 1000;
 
     .quote {
-        max-width: 1020px;
+        max-width: 1000px;
         margin: 40px auto 0 auto;
 
         .close-quote {
@@ -2094,37 +2093,33 @@ textarea {
         }
     }
 
-    .move-details {
-        float: left;
-        width: 480px;
-    }
-
-    .customer-details {
-        float: right;
-        width: 480px;
-    }
-
     .quote-form {
-        width: 1020px;
         text-align: left;
-        margin-top: 20px;
+        margin-top: 30px;
 
-        fieldset {
-            border:0;
-            padding: 0;
+        .move-details,
+        .customer-details {
+            width: 480px;
+        }
 
-            legend {
-                font-family: 'Roboto';
-                font-size: 18px;
-                font-weight: 500;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-                display: block;
-                width: 100%;
-                margin: 20px 0 15px 0;
-                padding: 0 0 10px 0;
-                color: $white;
+        .move-details {
+            float: left;
+        }
 
-            }
+        .customer-details {
+            float: right;
+        }
+
+        legend {
+            font-family: 'Roboto';
+            font-size: 18px;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            display: block;
+            width: 100%;
+            margin: 20px 0 15px 0;
+            padding: 0 0 10px 0;
+            color: $white;
         }
 
         label {
@@ -2135,8 +2130,20 @@ textarea {
             text-align: right;
         }
 
+        label.checkbox {
+            width: 70%;
+            text-align: left;
+            margin: 10px 0 0 0;
+            margin-left: 25%;
+
+            input {
+                margin: 5px 10px 0 0;
+            }
+        }
+
         select,
-        input:not([type=submit]):not([type=file]):not([type=checkbox]) {
+        input[type=text],
+        input[type=email]{
             color: $dark-grey;
             padding: 5px 7px;
             border-radius: 3px;
@@ -2162,6 +2169,17 @@ textarea {
         .move-location .international input,
         .move-location .international select {
             float: left;
+        }
+
+        input.voucher {
+            display: none;
+            margin-left: 25%;
+            margin-top: 10px;
+        }
+
+        .submit-form {
+            margin-top: 20px;
+            margin-left: 25%;
         }
 
     }

@@ -203,4 +203,13 @@ $(document).ready(function(){
         setToCountry();
     });
 
+    $(document).on('change', '#show-voucher', function() {
+        if($('#show-voucher').is(":checked")) {
+            $('.voucher').show();
+        } else {
+            $('.voucher').hide();
+        }
+    });
+
+
 });
