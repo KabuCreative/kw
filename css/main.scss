@@ -851,7 +851,7 @@ header {
 .logos {
     margin: 0 auto;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 0 0 0;
     border-bottom: 1px solid darken($bg-grey, 5%);
 
     img {
@@ -1603,7 +1603,6 @@ hr {
         -o-transform: translate(-50%, -40%);
         -ms-transform: translate(-50%, -40%);
         transform: translate(-50%, -40%);
-
     }
 
     span {
