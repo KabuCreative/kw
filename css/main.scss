@@ -622,7 +622,7 @@ header {
         float: right;
         margin-top: 8px;
 
-        @media only screen and (max-width: 340px) {
+        @media only screen and (max-width: 380px) {
             span {
                 display: none;
             }
@@ -1917,13 +1917,18 @@ aside.col-1-4 {
 
 //Forms
 
-input, textarea, select {
-    padding: 5px;
+input,
+textarea,
+select {
     background-color: $white;
     border: 1px solid $bg-grey;
     border-radius: 2px;
     display: block;
-    margin: 5px 0 15px 0;
+    margin: 5px 0 12px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 7px;
 }
 
 
@@ -1931,6 +1936,32 @@ label {
     font-weight: bold;
     display: block;
 }
+
+fieldset {
+    border: 0;
+    margin: 0 0 40px 0;
+    padding: 0;
+
+}
+
+legend {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid $bg-grey;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    color: darken($bg-grey, 30%);
+}
+
+
+textarea {
+    width: 100%;
+    height: 170px;
+}
+
 
 
 .horizontal {
@@ -1940,17 +1971,19 @@ label {
         clear: both;
 
         label {
-            width: 25%;
+            width: 18%;
             float: left;
-            text-align: right;
             margin-top: 10px;
             margin-right: 5%;
+
+            @media only screen and (max-width: 1000px) {
+                width: 25%;
+            }
 
             @media only screen and (max-width: 700px) {
                 float: none;
                 width: 100%;
                 margin: 15px 0 5px 0;
-                text-align: left;
             }
 
         }
@@ -1959,11 +1992,15 @@ label {
         input[type="email"],
         select,
         textarea {
-            width: 55%;
+            width: 72%;
             float: left;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
+
+            @media only screen and (max-width: 1000px) {
+                width: 65%;
+            }
 
             @media only screen and (max-width: 700px) {
                 float: none;
@@ -1972,7 +2009,11 @@ label {
         }
 
         .submit {
-            margin-left: 30%;
+            margin-left: 23%;
+
+            @media only screen and (max-width: 1000px) {
+                margin-left: 30%;
+            }
 
             @media only screen and (max-width: 700px) {
                 margin-left: 0;
@@ -2001,27 +2042,61 @@ label {
     .width,
     .depth,
     .height {
-        max-width: 90px;
+        width: 105px;
     }
 
     .weight {
-        max-width: 150px;
+        width: 170px;
     }
 
     .description {
         width: 250px;
     }
 
-    .art-image {
-        padding: 5px 8px;
-        position: relative;
-        top: -1px;
-        font-size: 14px;
-    }
-
     .remove-row {
         margin-left: 20px;
         font-size: 13px;
+    }
+
+    @media only screen and (max-width: 1050px) {
+        border-bottom: 1px solid $bg-grey;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+
+        .no-items,
+        .width,
+        .depth,
+        .height,
+        .weight,
+        .description {
+            width: 30%;
+        }
+
+        .remove-row {
+            margin-left: 0;
+        }
+    }
+
+    @media only screen and (max-width: 700px) {
+        .no-items,
+        .width,
+        .depth,
+        .height,
+        .weight,
+        .description {
+            width: 45%;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .no-items,
+        .width,
+        .depth,
+        .height,
+        .weight,
+        .description {
+            width: 100%;
+        }
     }
 
 }
@@ -2038,17 +2113,61 @@ label {
     width: 20%;
     display: inline-block;
     margin-bottom: 20px;
+
+    @media only screen and (max-width: 1200px) {
+        width: 24%;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        width: 45%;
+        margin-right: 5px;
+        margin-bottom: 10px;
+
+        input {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        width: 100%;
+
+        input {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .moving-date,
+    .value {
+        width: 100%;
+    }
 }
 
 .location {
+
+    @media only screen and (max-width: 500px) {
+        margin-bottom: 15px;
+    }
+
     input,
     select {
         display: inline-block;
         margin-right: 5px;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
         width: 200px;
+
+        @media only screen and (max-width: 660px) {
+            width: 160px;
+        }
+
+        @media only screen and (max-width: 550px) {
+            width: 140px;
+        }
+
+        @media only screen and (max-width: 500px) {
+            width: 100%;
+            margin-bottom: 5px;
+        }
     }
 }
 
@@ -2060,29 +2179,4 @@ label {
     }
 
     margin: 20px 0;
-}
-
-fieldset {
-    border: 0;
-    margin: 0 0 40px 0;
-    padding: 0;
-
-}
-
-legend {
-    display: block;
-    width: 100%;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-bottom: 1px solid $bg-grey;
-    padding: 10px 0;
-    margin-bottom: 20px;
-    color: darken($bg-grey, 30%);
-}
-
-
-textarea {
-    width: 100%;
-    height: 170px;
 }
