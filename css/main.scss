@@ -1912,3 +1912,73 @@ aside.col-1-4 {
 .icon {
     max-height: 45px;
 }
+
+
+//Forms
+
+input, textarea, select {
+    padding: 5px;
+    background-color: $white;
+    border: 1px solid $bg-grey;
+    border-radius: 2px;
+    display: block;
+    margin: 5px 0 15px 0;
+}
+
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+
+.horizontal {
+    margin-top: 40px;
+
+    .form-block {
+        clear: both;
+
+        label {
+            width: 25%;
+            float: left;
+            text-align: right;
+            margin-top: 10px;
+            margin-right: 5%;
+
+            @media only screen and (max-width: 700px) {
+                float: none;
+                width: 100%;
+                margin: 15px 0 5px 0;
+                text-align: left;
+            }
+
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 55%;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+            @media only screen and (max-width: 700px) {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        .submit {
+            margin-left: 30%;
+
+            @media only screen and (max-width: 700px) {
+                margin-left: 0;
+            }
+        }
+
+
+    }
+
+}
