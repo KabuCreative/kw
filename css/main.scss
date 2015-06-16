@@ -45,7 +45,7 @@ h2.center {
 
     &:before,
     &:after {
-        border-top: 2px solid rgba(0, 0, 0, 0.05);
+        border-top: 2px solid rgba(0, 0, 0, 0.1);
         content: "";
         display: inline-block;
         height: .1em;
@@ -142,10 +142,10 @@ html, body{
 }
 
 .light-grey-bg {
-    background-color: lighten($bg-grey, 10%);
-    border-top: 1px solid lighten($bg-grey, 5%);
-    border-bottom: 1px solid lighten($bg-grey, 5%);
-    box-shadow: inset 0px 11px 10px -15px rgba(0, 0, 0, .15), inset 0px -11px 15px -15px rgba(0, 0, 0, .15);
+    background: url('../img/grey-bg.png');
+    border-top: 1px solid darken($bg-grey, 5%);
+    border-bottom: 1px solid darken($bg-grey, 5%);
+    box-shadow: inset 0px 11px 10px -15px rgba(0, 0, 0, .4), inset 0px -11px 10px -15px rgba(0, 0, 0, .4);
 }
 
 .green-bg {
