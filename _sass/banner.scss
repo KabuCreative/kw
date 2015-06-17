@@ -1,0 +1,191 @@
+.banner {
+    margin: 0;
+    padding: 0;
+    background: #1e5232 url('../img/banners/standard.jpg') no-repeat top center fixed;
+    color: $white;
+
+    .banner-content {
+        padding: 50px 20px 35px 20px;
+        text-align: center;
+        max-width: 760px;
+        margin: 0 auto;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+
+        @media only screen and (max-width: 350px) {
+            padding: 30px 10px 20px 10px;
+        }
+
+        h1 {
+            font-size: 50px;
+            line-height: 1.1;
+            margin: 0 0 10px 0;
+
+            @media only screen and (max-width: 700px) {
+                font-size: 40px;
+            }
+
+            @media only screen and (max-width: 350px) {
+                font-size: 35px;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+
+        p.subtitle {
+            font-size: 20px;
+            margin: 0 0 20px 0;
+            font-weight: 600;
+            display: inline-block;
+            text-transform: uppercase;
+
+            @media only screen and (max-width: 700px) {
+                font-size: 18px;
+            }
+
+            @media only screen and (max-width: 350px) {
+                font-size: 16px;
+            }
+        }
+
+        p.about {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .button {
+            font-size: 22px;
+            padding: 12px 20px;
+            margin: 0 0 20px 0;
+        }
+    }
+}
+
+.banner.air-freight {
+    background-image: url('../img/banners/air-freight.jpg');
+}
+
+.banner.sea-freight {
+    background-image: url('../img/banners/sea-freight.jpg');
+
+}
+
+.banner.baggage {
+    background-image: url('../img/banners/baggage.jpg');
+}
+
+.banner.guarantee {
+    background-image: url('../img/banners/guarantee.jpg');
+}
+
+.banner.uk {
+    background-image: url('../img/banners/uk.jpg');
+}
+
+.banner.nz {
+    background-image: url('../img/banners/nz.jpg');
+}
+
+.banner.europe {
+    background-image: url('../img/banners/europe.jpg');
+}
+
+.banner.north-america {
+    background-image: url('../img/banners/north-america.jpg');
+}
+
+.banner.singapore {
+    background-image: url('../img/banners/singapore.jpg');
+}
+
+.banner.hong-kong {
+    background-image: url('../img/banners/hong-kong.jpg');
+}
+
+.banner.australia {
+    background-image: url('../img/banners/australia.jpg');
+}
+
+.banner.south-africa {
+    background-image: url('../img/banners/south-africa.jpg');
+}
+
+.banner.middle-east {
+    background-image: url('../img/banners/middle-east.jpg');
+}
+
+.banner.melbourne {
+    background-image: url('../img/banners/melbourne.jpg');
+}
+
+.banner.sydney {
+    background-image: url('../img/banners/sydney.jpg');
+}
+
+.banner.canberra {
+    background-image: url('../img/banners/canberra.jpg');
+}
+
+.banner.perth {
+    background-image: url('../img/banners/perth.jpg');
+}
+
+.banner.brisbane {
+    background-image: url('../img/banners/brisbane.jpg');
+}
+
+.banner.adelaide {
+    background-image: url('../img/banners/adelaide.jpg');
+}
+
+.banner.storage {
+    background-image: url('../img/banners/storage.jpg');
+}
+
+.banner.international-vehicles {
+
+}
+
+.banner.interstate-car {
+    background-image: url('../img/banners/interstate-car.jpg');
+}
+
+.banner.pets {
+    background-image: url('../img/banners/pets.jpg');
+}
+
+.banner.insurance {
+    background-image: url('../img/banners/insurance.jpg');
+}
+
+.banner.corporate {
+    background-image: url('../img/banners/corporate.jpg');
+}
+
+.logos {
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0 0 0;
+    border-bottom: 1px solid darken($bg-grey, 5%);
+
+    img {
+        display: inline-block;
+        padding: 0 25px;
+        opacity: 0.9;
+
+        @media only screen and (max-width: 700px) {
+            padding: 0 2%;
+            max-height: 35px;
+        }
+
+        @media only screen and (max-width: 500px) {
+            max-height: 30px;
+        }
+
+        @media only screen and (max-width: 400px) {
+            max-height: 25px;
+        }
+    }
+
+}

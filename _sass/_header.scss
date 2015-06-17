@@ -1,0 +1,128 @@
+header {
+    background-color: $kw-green;
+}
+
+.site-header {
+    color: $white;
+    padding: 15px 0;
+
+    @media only screen and (max-width: 550px) {
+        padding: 10px 0;
+    }
+
+    a {
+        color: $white;
+    }
+
+    .site-title {
+        float: left;
+
+        img {
+            image-rendering: -moz-crisp-edges;         /* Firefox */
+            image-rendering:   -o-crisp-edges;         /* Opera */
+            image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: nearest-neighbor;
+        }
+
+        @media only screen and (max-width: 550px) {
+            float: none;
+            text-align: center;
+            display: block;
+        }
+    }
+
+    .right {
+        float: right;
+
+        @media only screen and (max-width: 550px) {
+            float: none;
+        }
+
+        .top-menu {
+            float: right;
+            margin: 5px 0;
+            font-size: 15px;
+
+            @media only screen and (max-width: 1130px) {
+                display: none;
+            }
+
+            a {
+                text-decoration: none;
+                margin-left: 10px;
+            }
+        }
+
+        .under-menu {
+            clear: both;
+
+            #phone {
+                color: $kw-cream;
+                text-decoration: none;
+                font-family: 'Roboto', sans-serif;
+                font-weight: bold;
+                display: inline-block;
+                text-align: right;
+                float: right;
+                font-size: 28px;
+
+                @media only screen and (max-width: 1130px) {
+                    margin-top: 20px;
+                }
+
+                @media only screen and (max-width: 550px) {
+                    display: none;
+                }
+            }
+
+            .search {
+                @media only screen and (max-width: 1130px) {
+                    display: none;
+                }
+            }
+
+            .search-button {
+                width: 35px;
+                height: 35px;
+                display: block;
+                float: right;
+                text-align: right;
+                background-color: darken($kw-green, 1.5%);
+                border-radius: 50%;
+                position: relative;
+                top: 2px;
+                margin-right: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+
+                i {
+                    float: none;
+                    position: absolute;
+                    top: 9px;
+                    left: 9px;
+                    font-size: 18px;
+                }
+            }
+
+            .search-input {
+                float: right;
+                width: 150px;
+                margin: 8px 6px 0 0;
+            }
+        }
+    }
+}
+
+.site-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.search-input {
+    border-radius: 3px;
+    border: 0;
+    padding: 4px;
+    color: #555;
+    font-size: 14px;
+}

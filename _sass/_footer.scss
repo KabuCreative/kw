@@ -1,0 +1,79 @@
+
+.site-footer {
+    background-color: $kw-green;
+    border-top: 5px solid darken($kw-green, 5%);
+    color: $white;
+    margin: 0;
+    padding: 30px 0;
+    font-size: 14px;
+
+    h3 {
+        color: $kw-cream;
+    }
+
+    a {
+        color: $white;
+        text-decoration: underline;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            margin: 0;
+
+            a {
+                font-size: 14px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .twitter {
+        @media only screen and (max-width: 700px) {
+            display: none;
+        }
+    }
+
+    .social-icons {
+
+        a {
+            display: inline-block;
+            padding: 12px;
+            border-radius: 50%;
+            background-color: darken($kw-green, 5%);
+            font-size: 25px;
+            width: 25px;
+            height: 25px;
+            line-height: 1;
+            text-align: center;
+            margin: 20px 2px 0 0;
+
+            @media only screen and (max-width: 700px) {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.sub-footer,
+.art-footer {
+    background-color: darken($kw-green, 5%);
+    color: $white;
+    padding: 5px 10px;
+    font-size: 12px;
+
+    a {
+        color: $white;
+        display: inline-block;
+        margin-right: 15px;
+        padding: 5px 0;
+    }
+}
+
+.art-footer {
+    background-color: $kw-green;
+    border-top: 5px solid darken($kw-green, 5%);
+}
