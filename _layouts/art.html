@@ -3,7 +3,7 @@
   {% include head.html %}
   <body>
     {% include art-header.html %}
-    <div class="banner">
+    <div class="banner {% if page.banner_name %}{{ page.banner_name }}{% else %}art{% endif %}">
         {% include art-nav.html %}
         <div class="banner-content">
             {{ page.banner }}
