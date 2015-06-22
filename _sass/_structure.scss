@@ -25,6 +25,14 @@ img {
     text-align: center;
 }
 
+
+// Only centered on desktop, not mobile
+
+@media only screen and (min-width: 700px) {
+    .desktop-center {
+        text-align: center;
+    }
+}
 .right {
     text-align: right;
 }
@@ -51,6 +59,10 @@ img {
     max-width: 900px;
     margin: 30px auto 0 auto;
     text-align: center;
+
+    @media only screen and (max-width: 700px) {
+        text-align: left;
+    }
 }
 
 

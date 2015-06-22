@@ -1,27 +1,5 @@
 // Homepage
 
-.homepage-logos {
-    margin: 0;
-    width: 100%;
-
-    @media only screen and (max-width: 635px) {
-        display: none;
-    }
-
-    img {
-        display: inline-block;
-        margin-right: 20px;
-        padding: 20px 5px 5px 0;
-        max-height: 30px;
-    }
-}
-
-.accreditation {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .stat-section {
     padding: 0;
 
@@ -96,6 +74,21 @@
     }
 }
 
+.homepage-logos {
+    margin: 0;
+    width: 100%;
+
+    @media only screen and (max-width: 635px) {
+        display: none;
+    }
+
+    img {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 10px 5px 5px 0;
+        max-height: 30px;
+    }
+}
 
 // Faqs (on internal pages and FAQ page)
 
