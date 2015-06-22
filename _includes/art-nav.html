@@ -10,7 +10,9 @@
             <a href="/art/insurance/">Insurance</a>
             <a href="/art/exhibitions/"><span class="hide-on-menu">Exhibition &amp; </span>Fairs</a>
             <a href="/art/contact-us/">Contact<span class="hide-on-menu"> Us</span></a>
-            <a class="quote-link" href="/art/quote/">Quote</a>
+            {% if page.quote != 'None' %}
+                <a class="quote-link" href="/art/quote/">Quote</a>
+            {% endif %}
         </div>
     </nav>
 
@@ -19,7 +21,9 @@
             <a class="trigger-menu" href="#"><i class="fa fa-bars"></i></a>
             <a href="#" class="search-button trigger"><i class="fa fa-search"></i></a>
             <a href="tel:1300-365-804" class="phone"><i class="fa fa-phone"></i></a>
-            <a class="quote-link" href="/art/quote/"><span>Request a </span>Quote</a>
+            {% if page.quote != 'None' %}
+                <a class="quote-link" href="/art/quote/"><span>Request a </span>Quote</a>
+            {% endif %}
         </div>
     </nav>
 

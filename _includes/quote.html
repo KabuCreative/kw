@@ -1,7 +1,11 @@
 <div class="quote-overlay"></div>
 
 <div id="quote">
-    <p>All quotes delivered within 12 business hours. <strong>Need a quote faster?  Call us on 1300 368 893</strong></p>
+    {% if page.quote != 'baggage' %}
+        <p>All quotes delivered within 12 business hours. <strong>Need a quote faster?  Call us on 1300 368 893</strong></p>
+    {% else %}
+        <p>Fill out the form below to receive an instant quote - available for addresses in in Victoria, NSW and the ACT</p>
+    {% endif %}
     <a href="#" class="close-quote"><i class="fa fa-times"></i></a>
 
     <form class="quote-form">
