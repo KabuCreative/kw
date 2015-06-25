@@ -4,7 +4,7 @@ input,
 textarea,
 select {
     background-color: $white;
-    border: 1px solid $bg-grey;
+    border: 1px solid darken($bg-grey, 7%);
     border-radius: 2px;
     display: block;
     margin: 5px 0 12px 0;
@@ -125,6 +125,10 @@ label.checkbox {
 
 // Art Quote Form
 
+.art-quote {
+    max-width: 70%;
+}
+
 .art-formset {
     margin-bottom: 20px;
 }
@@ -205,6 +209,7 @@ label.checkbox {
 .art-quote {
     margin-top: 40px;
 }
+/*
 
 .art-quote .form-block {
     width: 20%;
@@ -233,6 +238,7 @@ label.checkbox {
         }
     }
 }
+*/
 
 .location {
 

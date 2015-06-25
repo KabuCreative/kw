@@ -5,6 +5,7 @@ table {
     border: 1px solid #cbcbcb;
     max-width: 100%;
     overflow-y: scroll;
+    width: 100%;
 
     thead {
         font-weight: bold;
@@ -48,7 +49,7 @@ table.no-lines {
     }
 
     td {
-        padding: 7px 70px 7px 0;
+        padding: 7px 7px 7px 0;
 
         @media only screen and (max-width: 900px) {
             display: inline-block;
