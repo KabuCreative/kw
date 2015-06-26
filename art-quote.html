@@ -8,21 +8,17 @@ banner: >
     <p class="subtitle">Fine art logistics and storage</p>
 ---
 <div class="section desktop tablet mobile">
-    <div class="container">
+    <div class="quote-container">
         <h2>Request a quote</h2>
         <p>Please use the form below to requst a quote.  Fields marked with * are required. We aim to respond to all enquiries within 12 business hours.</p>
 
-        <form action="" method="post" class="horizontal art-quote">
+        <form action="" method="post" class="horizontal">
 
             <fieldset>
                 <legend>Your Details</legend>
                 <div class="form-block">
-                    <label for="firstname">First Name*</label>
+                    <label for="firstname">Name*</label>
                     <input type="text" name="" value="" id="first-name" />
-                </div>
-                <div class="form-block">
-                    <label for="phone">Surname*</label>
-                    <input type="text" name="" value="" id="phone" />
                 </div>
                 <div class="form-block">
                     <label for="email">Phone*</label>
@@ -38,66 +34,57 @@ banner: >
                 <legend>Art Information</legend>
                 <p>Please enter as much information as you have for each piece (or set) you wish to move.</p>
 
-                <div class="art-formset">
-                    <div class="art-piece">
-                        <input type="text" name="" value="" id="" placeholder="No. of items" class="no-items"/>
-                        <input type="text" name="" value="" id="" placeholder="Description" class="description"/>
-                        <input type="text" name="" value="" id="" placeholder="Depth (cm)" class="depth"/>
-                        <input type="text" name="" value="" id="" placeholder="Width (cm)" class="width"/>
-                        <input type="text" name="" value="" id="" placeholder="Height (cm)" class="height"/>
-                        <input type="text" name="" value="" id="" placeholder="Weight (if over 25kg)" class="weight"/>
-                        <a href="#" class="remove-row">Remove</a>
-                    </div>
-                    <div class="art-piece">
-                        <input type="text" name="" value="" id="" placeholder="No. of items" class="no-items"/>
-                        <input type="text" name="" value="" id="" placeholder="Description" class="description"/>
-                        <input type="text" name="" value="" id="" placeholder="Depth (cm)" class="depth"/>
-                        <input type="text" name="" value="" id="" placeholder="Width (cm)" class="width"/>
-                        <input type="text" name="" value="" id="" placeholder="Height (cm)" class="height"/>
-                        <input type="text" name="" value="" id="" placeholder="Weight (if over 25kg)" class="weight"/>
-                        <a href="#" class="remove-row">Remove</a>
-                    </div>
-
-                    <a href="#" class="add-another">Add another</a>
+                <div class="form-block">
+                    <label>Artwork(s)</label>
+                    <textarea placeholder="For each art piece (or set of pieces), please list the width, depth and height of each work.  Please also include information on the weight of each piece if it is over 25kg."></textarea>
                 </div>
 
-                <label>Total value for insurance purposes (AUD)</label>
-                <input type="text" name="" value="" id="" placeholder="$" class="value"/>
+                <div class="form-block">
+                    <label>Total value (AUD)</label>
+                    <input type="text" name="" value="" id="" placeholder="Total value for insurance purposes (in AUD)" class="value" />
+                </div>
             </fieldset>
 
             <fieldset>
                 <legend>Moving Details</legend>
 
-                <label>Moving Date</label>
-                <input type="text" name="" value="" id="" class="moving-date"/>
+                <div class="form-block">
+                    <label>Moving Date</label>
+                    <input type="text" name="" value="" id="" class="moving-date"/>
+                </div>
 
-                <label>Pick up from *</label>
-                <div class="location">
+                <div class="form-block">
+                    <label>Pick up from *</label>
                     <select name="" id="">
                         <option value="">Australia</option>
                     </select>
                     <input type="text" name="" value="" id="" placeholder="Postcode"/>
                 </div>
 
-                <label>Delivery to *</label>
-                <div class="location">
+                <div class="form-block">
+                    <label>Deliver to *</label>
                     <select name="" id="">
                         <option value="">Australia</option>
                     </select>
                     <input type="text" name="" value="" id="" placeholder="Postcode"/>
                 </div>
 
-                <label class="checkbox">
-                    <input type="checkbox" name="" value="" /> I require professional packing
-                </label>
+                <div class="form-block inset">
+                    <label class="checkbox">
+                        <input type="checkbox" name="" value="" /> I require professional packing
+                    </label>
+                </div>
 
-                <label for="">Questions or comments</label>
-                <textarea name="" cols="50" rows="10" id="" ></textarea>
+                <div class="form-block">
+                    <label for="">Questions or comments</label>
+                    <textarea name="" cols="50" rows="10" id="" ></textarea>
+                </div>
 
-                <input type="submit" class="button primary small" value="Request a Quote">
-
-                <div>
-                    <small>We respect your privacy and do not share your data.</small>
+                <div class="form-block inset">
+                    <input type="submit" class="button primary small" value="Request a Quote">
+                    <div>
+                        <small>We respect your privacy and do not share your data.</small>
+                    </div>
                 </div>
             </fieldset>
         </form>

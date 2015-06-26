@@ -9,11 +9,14 @@ banner: >
     <p class="subtitle">Where can we move you?</p>
 ---
 <div class="section desktop tablet mobile">
-    <div class="container">
+    <div class="quote-container">
         <h2>Moving your vehicle? Request a quote</h2>
-        <p>Please use the form below to request a quote for moving your vehicle interstate or overseas.  Fields marked with * are required. We aim to respond to all enquiries within 12 business hours.</p>
+        <p>
+            Please use the form below to request a quote for moving your vehicle interstate or overseas.<br />
+            Fields marked with * are required. We aim to respond to all enquiries within 12 business hours.
+        </p>
 
-        <form action="" method="post" class="art-quote">
+        <form action="" method="post" class="horizontal">
 
             <fieldset>
                 <legend>Your Details</legend>
@@ -38,25 +41,30 @@ banner: >
             <fieldset>
                 <legend>Vehicle / Moving Details</legend>
 
-                <label for="type">Type of Vehicle</label>
-                <select>
-                    <option>Car Type 1</option>
-                    <option>Car Type 2</option>
-                    <option>Car Type 3</option>
-                    <option>Car Type 4</option>
-                    <option>Motorcycle</option>
-                </select>
-
-                <label>Estimated Moving Date</label>
-                <input type="text" name="" value="" id="" class="moving-date"/>
-
-                <label>Pick up from * (Australian addresses only)</label>
-                <div class="location">
-                    <input type="text" name="" value="" id="" placeholder="Postcode"/>
+                <div class="form-block">
+                    <label for="type">Type of Vehicle</label>
+                    <select>
+                        <option>Car Type 1</option>
+                        <option>Car Type 2</option>
+                        <option>Car Type 3</option>
+                        <option>Car Type 4</option>
+                        <option>Motorcycle</option>
+                    </select>
                 </div>
 
-                <label>Delivery to *</label>
-                <div class="location">
+
+                <div class="form-block">
+                    <label>Moving Date</label>
+                    <input type="text" name="" value="" id="" class="moving-date" placeholder="Estimated Moving Date"/>
+                </div>
+
+                <div class="form-block">
+                    <label>Pick up from *</label>
+                    <input type="text" name="" value="" id="" placeholder="Australian Postcode"/>
+                </div>
+
+                <div class="form-block">
+                    <label>Deliver to *</label>
                     <select name="" id="">
                         <option value="">Australia</option>
                         <option value="">New Zealand</option>
@@ -65,10 +73,11 @@ banner: >
                     <input type="text" name="" value="" id="" placeholder="Postcode"/>
                 </div>
 
-                <br/>
-                <input type="submit" class="button primary small" value="Request a Quote">
-                <div>
-                    <small>We respect your privacy and do not share your data.</small>
+                <div class="form-block inset">
+                    <input type="submit" class="button primary small" value="Request a Quote">
+                    <div>
+                        <small>We respect your privacy and do not share your data.</small>
+                    </div>
                 </div>
             </fieldset>
         </form>

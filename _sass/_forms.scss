@@ -32,7 +32,7 @@ label {
 
 fieldset {
     border: 0;
-    margin: 0;
+    margin: 0 0 40px 0;
     padding: 0;
 }
 
@@ -78,190 +78,55 @@ label.checkbox {
             float: left;
             margin-top: 10px;
             margin-right: 5%;
+            text-align: right;
 
             @media only screen and (max-width: 1000px) {
                 width: 25%;
             }
 
-            @media only screen and (max-width: 700px) {
+            @media only screen and (max-width: 600px) {
                 float: none;
                 width: 100%;
                 margin: 15px 0 5px 0;
+                text-align: left;
             }
+        }
 
+        label.checkbox {
+            float: none;
+            width: auto;
+            text-align: left;
         }
 
         input[type="text"],
         input[type="email"],
         select,
         textarea {
-            width: 72%;
-            float: left;
+            width: 73%;
+            margin-right: 4%;
+            float: right;
 
             @media only screen and (max-width: 1000px) {
                 width: 65%;
             }
 
-            @media only screen and (max-width: 700px) {
+            @media only screen and (max-width: 600px) {
                 float: none;
                 width: 100%;
             }
         }
-
-        .submit {
-            margin-left: 23%;
-
-            @media only screen and (max-width: 1000px) {
-                margin-left: 30%;
-            }
-
-            @media only screen and (max-width: 700px) {
-                margin-left: 0;
-            }
-        }
-    }
-}
-
-
-// Art Quote Form
-
-.art-quote {
-    max-width: 70%;
-}
-
-.art-formset {
-    margin-bottom: 20px;
-}
-
-.art-piece {
-    input {
-        display: inline-block;
-        margin-right: 5px;
     }
 
-    .no-items,
-    .width,
-    .depth,
-    .height {
-        width: 105px;
-    }
+    .form-block.inset {
+        padding-top: 10px;
+        margin-left: 23%;
 
-    .weight {
-        width: 170px;
-    }
-
-    .description {
-        width: 250px;
-    }
-
-    .remove-row {
-        margin-left: 20px;
-        font-size: 13px;
-    }
-
-    @media only screen and (max-width: 1050px) {
-        border-bottom: 1px solid $bg-grey;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-
-        .no-items,
-        .width,
-        .depth,
-        .height,
-        .weight,
-        .description {
-            width: 30%;
+        @media only screen and (max-width: 1000px) {
+            margin-left: 31%;
         }
 
-        .remove-row {
+        @media only screen and (max-width: 600px) {
             margin-left: 0;
-        }
-    }
-
-    @media only screen and (max-width: 700px) {
-        .no-items,
-        .width,
-        .depth,
-        .height,
-        .weight,
-        .description {
-            width: 45%;
-        }
-    }
-
-    @media only screen and (max-width: 500px) {
-        .no-items,
-        .width,
-        .depth,
-        .height,
-        .weight,
-        .description {
-            width: 100%;
-        }
-    }
-
-}
-
-.add-another {
-    font-size: 13px;
-}
-
-.art-quote {
-    margin-top: 40px;
-}
-/*
-
-.art-quote .form-block {
-    width: 20%;
-    display: inline-block;
-    margin-bottom: 20px;
-
-    @media only screen and (max-width: 1200px) {
-        width: 24%;
-    }
-
-    @media only screen and (max-width: 1000px) {
-        width: 45%;
-        margin-right: 5px;
-        margin-bottom: 10px;
-
-        input {
-            width: 100%;
-        }
-    }
-
-    @media only screen and (max-width: 500px) {
-        width: 100%;
-
-        input {
-            width: 100%;
-        }
-    }
-}
-*/
-
-.location {
-
-    @media only screen and (max-width: 500px) {
-        margin-bottom: 15px;
-    }
-
-    input,
-    select {
-        display: inline-block;
-        margin-right: 5px;
-
-        @media only screen and (max-width: 660px) {
-            width: 160px;
-        }
-
-        @media only screen and (max-width: 550px) {
-            width: 140px;
-        }
-
-        @media only screen and (max-width: 500px) {
-            width: 100%;
-            margin-bottom: 5px;
         }
     }
 }
