@@ -133,10 +133,29 @@ $(document).ready(function(){
         e.preventDefault();
         $('.quote-overlay').hide();
         $('#quote').hide();
-
     });
 
+    $(document).on('click', '.inventory-button', function(e){
+        e.preventDefault();
+        $('.inventory-overlay').toggle();
+        $('#inventory').toggle();
+    });
 
+    $(document).on('click', '.close-inventory, .save-inventory', function(e){
+        $('.inventory-overlay').hide();
+        $('#inventory').hide();
+    });
+
+    $(document).on('click', '.form-tooltip', function(e){
+        e.preventDefault();
+        $('.form-tooltip-img').hide();
+        $(this).next('.form-tooltip-img').show();
+    });
+
+    $(document).on('click', '.form-tooltip-close', function(e){
+        e.preventDefault();
+        $(this).closest('.form-tooltip-img').hide();
+    });
 
     function setMoveType(){
         moveType = $('#move-type :selected').attr('value');

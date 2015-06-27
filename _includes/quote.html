@@ -69,6 +69,7 @@
                     </select>
                 </div>
             </div>
+
             <label>Move quantity</label>
             <select id="move-type">
                 <option disabled selected>- Select move quantity -</option>
@@ -76,8 +77,13 @@
                 <option value="small">A small move (a few bags and boxes, no furniture)</option>
             </select>
 
-            <div class="small-move move-type">
-                instant quote form here
+            <div class="small-move move-type instant">
+                <p>
+                    <strong>You are eligible to receive an instant quote!</strong><br />
+                    Please fill out your inventory to access our instant pricing - it's fast and easy.
+                </p>
+                <a href="" class="button small inventory-button">Fill out your inventory</a>
+                <p>Don't have the details on hand?  Complete the rest of this form and we will contact you.</p>
             </div>
 
             <div class="whole-home move-type">
@@ -142,4 +148,105 @@
         </fieldset>
         <div class="clearfix"></div>
     </form>
+</div>
+
+<div class="inventory-overlay"></div>
+
+<div id="inventory">
+    <a href="#" class="close-inventory"><i class="fa fa-times"></i></a>
+
+    <div class="inventory-form">
+        <h3>What are you going to ship?</h3>
+        <p>Fill out the inventory below and we will provide you with an instant quote!</p>
+
+        <div class="row">
+            <div class="col-1-2">
+                <div class="wrap">
+                    <label for="item_baggage_pack">Baggage Pack</label>
+                    <a href="#" class="form-tooltip">
+                        <i class="fa fa-camera"></i>
+                    </a>
+                    <div class="form-tooltip-img">
+                        <img src="/img/quote-img/baggage_pack.jpg" alt="Baggage Pack">
+                        <a href="#" class="form-tooltip-close"><i class="fa fa-times"></i></a>
+                    </div>
+                    <input type="text" id="item_baggage_pack" name="item_baggage_pack" placeholder="0" value="">
+                </div>
+                <div class="wrap">
+                    <label for="item_bicycle">Bicycle</label>
+                    <a href="#" class="form-tooltip">
+                        <i class="fa fa-camera"></i>
+                    </a>
+                    <div class="form-tooltip-img">
+                        <img src="/img/quote-img/bike-pack.jpg" alt="Bicycle">
+                        <a href="#" class="form-tooltip-close"><i class="fa fa-times"></i></a>
+                    </div>
+                    <input type="text" id="item_bicycle" name="item_bicycle" placeholder="0" value="">
+                </div>
+                <div class="wrap">
+                    <label for="item_golf_bag">Golf Bag</label>
+                    <a href="#" class="form-tooltip">
+                        <i class="fa fa-camera"></i>
+                    </a>
+                   <div class="form-tooltip-img">
+                        <img src="/img/quote-img/golf-pack.jpg" alt="Golf Bag">
+                        <a href="#" class="form-tooltip-close"><i class="fa fa-times"></i></a>
+                    </div>
+                    <input type="text" id="item_golf_bag" name="item_golf_bag" placeholder="0" value="">
+                </div>
+                <div class="wrap">
+                    <label for="item_guitar">Guitar</label>
+                    <input type="text" id="item_guitar" name="item_guitar" placeholder="0" value="">
+                </div>
+                <div class="wrap">
+                    <label for="item_suitcase">Suitcase Medium</label>
+                    <input type="text" id="item_suitcase" name="item_suitcase" placeholder="0" value="">
+                </div>
+            </div>
+            <div class="col-1-2">
+                <div class="wrap">
+                    <label for="item_picture">Picture Carton</label>
+                    <input type="text" id="item_picture" name="item_picture" placeholder="0" value="">
+                    <a href="#" class="form-tooltip">
+                        <i class="fa fa-camera"></i>
+                    </a>
+                    <div class="form-tooltip-img">
+                        <img src="/img/quote-img/art-pack.jpg" alt="Picture Carton">
+                        <a href="#" class="form-tooltip-close"><i class="fa fa-times"></i></a>
+                    </div>
+                </div>
+                <div class="wrap">
+                    <label for="item_book_carton">Book Carton</label>
+                    <input type="text" id="item_book_carton" name="item_book_carton" placeholder="0" value="">
+                    <a href="#" class="form-tooltip">
+                        <i class="fa fa-camera"></i>
+                    </a>
+                    <div class="form-tooltip-img">
+                        <img src="/img/quote-img/book-carton.jpg" alt="Book Carton">
+                        <a href="#" class="form-tooltip-close"><i class="fa fa-times"></i></a>
+                    </div>
+                </div>
+                <div class="wrap">
+                    <label for="item_surfboard">Surfboard</label>
+                    <input type="text" id="item_surfboard" name="item_surfboard" placeholder="0" value="">
+                </div>
+                <div class="wrap">
+                    <label for="item_trunk">Suitcase Large</label>
+                    <input type="text" id="item_trunk" name="item_trunk" placeholder="0" value="">
+                </div>
+                <div class="wrap">
+                    <label for="item_tube_package">Tube Package</label>
+                    <input type="text" id="item_tube_package" name="item_tube_package" placeholder="0" value="">
+                    <a href="#" class="form-tooltip">
+                        <i class="fa fa-camera"></i>
+                    </a>
+                    <div class="form-tooltip-img">
+                        <img src="/img/quote-img/tube-pack.jpg" alt="Tube Package">
+                        <a href="#" class="form-tooltip-close"><i class="fa fa-times"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="save-inventory button small">Save Inventory</a>
+    </div>
 </div>

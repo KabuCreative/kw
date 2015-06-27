@@ -135,6 +135,34 @@ label.checkbox {
 // Quote form (overlay)
 
 .quote-overlay {
+    z-index: 1000;
+}
+
+#quote {
+    z-index: 1500;
+    width: 1000px;
+
+    @media only screen and (max-width: 1060px) {
+        max-width: 85%;
+    }
+}
+
+.inventory-overlay {
+    z-index: 2000;
+}
+
+#inventory {
+    z-index: 2000;
+    width: 500px;
+
+    @media only screen and (max-width: 560px) {
+        max-width: 85%;
+    }
+
+}
+
+.quote-overlay,
+.inventory-overlay {
     display: none;
     position: absolute;
     left: 0;
@@ -142,160 +170,242 @@ label.checkbox {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 61, 32, .95);
-    z-index: 1000;
 }
 
-#quote {
+#quote,
+#inventory {
     position: fixed;
     display: none;
-    width: 1000px;
     top: 50%;
     left: 50%;
-    z-index: 2000;
     -moz-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    color: $white;
     max-height: 85%;
     overflow-y: auto;
     background-color: $kw-green;
     padding: 20px;
     border: 3px solid $white;
 
-    @media only screen and (max-width: 1060px) {
-        max-width: 85%;
-    }
 
-    .close-quote {
+
+    .close-quote,
+    .close-inventory {
         color: #fff;
         position: absolute;
         right: 15px;
         top: 10px;
     }
 
-    .quote-form {
-        text-align: left;
-        margin: 20px 0;
+    label,
+    h3,
+    p,
+    a {
+        color: $white;
+    }
+}
 
-        .move-details,
-        .customer-details {
-            width: 480px;
+.quote-form {
+    text-align: left;
+    margin: 20px 0 0 0;
 
-            @media only screen and (max-width: 1060px) {
-                width: 47%;
-            }
+    .move-details,
+    .customer-details {
+        width: 480px;
+        margin-bottom: 0;
 
-            @media only screen and (max-width: 700px) {
-                width: 100%;
-                float: none;
-            }
+        @media only screen and (max-width: 1060px) {
+            width: 47%;
         }
 
-        .move-details {
-            float: left;
-        }
-
-        .customer-details {
-            float: right;
-        }
-
-        legend {
-            font-family: 'Roboto';
-            font-size: 18px;
-            font-weight: 500;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            display: block;
+        @media only screen and (max-width: 700px) {
             width: 100%;
-            margin: 20px 0 15px 0;
-            padding: 0 0 10px 0;
-            color: $white;
+            float: none;
         }
+    }
 
-        label {
-            display: inline-block;
-            width: 22%;
-            font-weight: normal;
-            margin-right: 3%;
-            text-align: right;
+    .move-details {
+        float: left;
+    }
 
-            @media only screen and (max-width: 540px) {
-                width: 100%;
-                text-align: left;
-                font-weight: bold;
-            }
-        }
+    .customer-details {
+        float: right;
+    }
 
-        label.checkbox {
-            width: 70%;
+    legend {
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-weight: 500;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        display: block;
+        width: 100%;
+        margin: 20px 0 15px 0;
+        padding: 0 0 10px 0;
+        color: $white;
+    }
+
+    label {
+        display: inline-block;
+        width: 22%;
+        font-weight: normal;
+        margin-right: 3%;
+        text-align: right;
+
+        @media only screen and (max-width: 540px) {
+            width: 100%;
             text-align: left;
-            margin: 10px 0 0 0;
-            margin-left: 25%;
+            font-weight: bold;
+        }
+    }
 
-            input {
-                margin: 5px 10px 0 0;
-            }
+    label.checkbox {
+        width: 70%;
+        text-align: left;
+        margin: 10px 0 0 0;
+        margin-left: 25%;
 
-            @media only screen and (max-width: 540px) {
-                margin-left: 0;
-            }
+        input {
+            margin: 5px 10px 0 0;
         }
 
-        select,
-        input[type=text],
-        input[type=email]{
-            color: $dark-grey;
-            padding: 5px 7px;
-            border-radius: 3px;
-            background-color: $white;
-            margin-bottom: 10px;
-            display: inline-block;
-            width: 73%;
+        @media only screen and (max-width: 540px) {
+            margin-left: 0;
+        }
+    }
 
-            @media only screen and (max-width: 540px) {
-                width: 100%;
-            }
+    select,
+    input[type=text],
+    input[type=email]{
+        padding: 5px 7px;
+        border-radius: 3px;
+        background-color: $white;
+        margin-bottom: 10px;
+        display: inline-block;
+        width: 73%;
+
+        @media only screen and (max-width: 540px) {
+            width: 100%;
+        }
+    }
+
+    .instant {
+        margin: 0px 0 20px 0;
+        margin-left: 26%;
+
+        @media only screen and (max-width: 540px) {
+            margin-left: 0;
         }
 
-        select.half,
-        input.half {
-            width: 36% !important;
-
-            @media only screen and (max-width: 540px) {
-                width: 49% !important;
-            }
+        .inventory-button {
+            margin-bottom: 0;
         }
+    }
 
-        .move-type,
-        .move-location,
-        .from,
-        .to {
-            display: none;
+    select.half,
+    input.half {
+        width: 36% !important;
+
+        @media only screen and (max-width: 540px) {
+            width: 49% !important;
         }
+    }
 
-        .move-location .international input,
-        .move-location .international select {
-            float: left;
+    .move-type,
+    .move-location,
+    .from,
+    .to {
+        display: none;
+    }
+
+    .move-location .international input,
+    .move-location .international select {
+        float: left;
+    }
+
+    input.voucher {
+        display: none;
+        margin-left: 25%;
+        margin-top: 10px;
+
+        @media only screen and (max-width: 540px) {
+            margin-left: 0;
         }
+    }
 
-        input.voucher {
-            display: none;
-            margin-left: 25%;
-            margin-top: 10px;
+    .submit-form {
+        margin-top: 20px;
+        margin-left: 25%;
 
-            @media only screen and (max-width: 540px) {
-                margin-left: 0;
-            }
-        }
-
-        .submit-form {
-            margin-top: 20px;
-            margin-left: 25%;
-
-            @media only screen and (max-width: 480px) {
-                margin-left: 0;
-            }
+        @media only screen and (max-width: 480px) {
+            margin-left: 0;
         }
     }
 }
+
+.inventory-form {
+    h3 {
+        margin-top: 0;
+    }
+
+    .wrap {
+        clear: both;
+
+        label {
+            display: inline-block;
+            line-height: 40px;
+            margin-top: 5px;
+        }
+        input {
+            display: inline-block;
+            width: 26px;
+            float: right;
+        }
+
+        .form-tooltip {
+            margin-left: 10px;
+            display: inline-block;
+            position: relative;
+        }
+    }
+
+    .save-inventory {
+        margin: 15px 0 0 0;
+
+        @media only screen and (max-width: 700px) {
+            margin: 15px 0;
+        }
+    }
+}
+
+#inventory .form-tooltip-img {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    border: 5px solid $white;
+    background: $white;
+    text-align: center;
+
+    a.form-tooltip-close {
+        display: block;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 20px;
+        height: 20px;
+        background: $white;
+        line-height: 20px;
+        text-align: center;
+        color: lighten($dark-grey, 5%);
+    }
+}
+
+
