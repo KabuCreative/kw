@@ -6,6 +6,9 @@ table {
     max-width: 100%;
     overflow-y: scroll;
     width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 
     thead {
         font-weight: bold;
@@ -49,16 +52,11 @@ table.no-lines {
     }
 
     td {
-        padding: 7px 7px 7px 0;
+        padding: 7px 30px 7px 0;
 
         @media only screen and (max-width: 900px) {
             display: inline-block;
-            width: 40%;
-        }
-
-        @media only screen and (max-width: 800px) {
-            display: inline-block;
-            width: 33%;
+            width: 50%;
         }
 
         @media only screen and (max-width: 600px) {
@@ -67,6 +65,14 @@ table.no-lines {
     }
 }
 
+table.no-lines.four-cols td {
+    width: 25%;
+
+    @media only screen and (max-width: 900px) {
+        display: inline-block;
+        width: 45%;
+    }
+}
 
 // Responsive Tables
 @media only screen and (max-width: 900px) {
@@ -145,5 +151,16 @@ table.no-lines {
         div.table-wrapper {
             border-color: rgba(255, 255, 255, .2);
         }
+    }
+}
+
+
+// Tables inside tabs
+
+.tabs table.no-lines {
+    width: auto;
+
+    @media only screen and (max-width: 900px) {
+        margin-bottom: 0;
     }
 }
