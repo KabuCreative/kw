@@ -12,7 +12,12 @@
                     <a href="#" class="todo">Client Login</a>
                 </div>
                 <div class="under-menu">
-                    <a href="tel:1300-368-893" id="phone">1300 368 893</a>
+                    {% if page.quote == 'baggage' %}
+
+                        <a href="tel:1300-335-032" id="phone">1300 335 032</a>
+                    {% else %}
+                        <a href="tel:1300-368-893" id="phone">1300 368 893</a>
+                    {% endif %}
                     <span class="search">
                         <a href="#" class="search-button"><i class="fa fa-search"></i></a>
                         <input type="text" name="search" class="search-input" placeholder="Search"/>
