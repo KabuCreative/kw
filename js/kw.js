@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+    // Activate fastclick
+    $(function() {
+        FastClick.attach(document.body);
+    });
+
     // FAQ accordions and tabs
 
     $('.faqs').accordion({
