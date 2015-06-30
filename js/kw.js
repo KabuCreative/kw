@@ -8,7 +8,7 @@ $(document).ready(function(){
     // FAQ accordions and tabs
 
     $('.faqs').accordion({
-        header: 'a',
+        header: 'a.q',
         heightStyle: 'content',
         active: false,
         collapsible: true,
